@@ -277,8 +277,140 @@
     %---------------------------------------------------------------------------------------------------------------------------
     \subsection{Higher-order lattice proliferation}
 
+    \vspace{2.0mm}\noindent\textbf{2006 onwards:}\vspace{1.0mm}
 
+    The onset of sistematic techniques  for  LB  stencils  fabrication  in  2006~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett,
+    2006-PhilippiPC+SurmasR-PhysRevE, 2006-ShanX+ChenH-JFluidMech}, allied to the expansion of LB  simulation  applications  and
+    domains, contributed to the proliferation of LB stencils over the following years. This further highlighted the  ambiguities
+    in velocity count-based naming schemes, as well as prompted the appearance of further lattice naming variety.
 
+    The  following  `DdVb'  lattices   were   derived   by   Ortiz~\cite{2007-OrtizCEP-DrUFSC},   using   prescribed   abscissas
+    quadrature~\cite{2006-PhilippiPC+SurmasR-PhysRevE}: second-order hexagonally regular (Bravais) D2V7; third-order  irregular,
+    i.e., not space-filling, D2V12; fourth-order irregular D2V19, D2V20, D2V21, and regular D2V37; fifth-order irregular D2V28a,
+    D2V28b, and regular D2V53a and D2V53b; sixth-order regular D2V81.  In  three-dimensional  Euclidean  space,  the  following:
+    second-order irregular D3V13, third-order irregular D3V27, and fourth-order irregular D3V52 and D3V53.
+
+    The D2V37, D2V53 and D2V81 lattices appear on~\cite{2007-PhilippiPC+DosSantosLOE-IntJModPhysC}. Analytically  derived  exact
+    weights and scale factors for the D2V17 and D2V37 lattices are reported in~\cite{2007-SiebertDN+PhilippiPC-IntJModPhysC}.
+
+    A `59-velocity model in three dimensions' is said to be of third order Hermite expansion, with sixth-order  tensor  isotropy
+    in~\cite{2008-ChenH+ShanX-PhysD}; however, no weights, velocity  list  nor  scaling  factors  of  such  lattice  are  given.
+    One-dimensional  D1Q3,  D1Q4,  D1Q5,  and  D1Q6,  as  well  as  two-dimensional  D2Q12  and  D2Q21  lattices  are  presented
+    in~\cite{2008-KimSH+BoydID-JComputPhys},      with      finite      Knudsen      number      appilcations      in      view.
+    Reference~\cite{2008-RubinsteinR+LuoLS-PhysRev} studies various two- and three-dimensional lattices of up to 51  velocities,
+    while referring to a `DdQq' notation as being `standard'.
+
+    On patent~\cite{2008-ShanX+ZhangR-USPat}, authors designate Cartesian,  space-filling  models  with  21,  37,  39,  and  103
+    velocities, as `2D-1', `2D-2', `3D-1', and `3D-2', respectively.
+
+    Discussion on a plurality of lattices and lattice  operations,  such  as  stretching,  extending  (product),  prunning,  and
+    superimposing, takes place in~\cite{2009-ChikatamarlaSS+KarlinIV-PhysRevE}; noteworthy ones are the  D$1$Q$(1+2k)$  lattices
+    for $k \in \{1, \ldots, 4\}$, the higher-order ones also referred to `1D seven/nine velocity set'; the `ZOT', i.e.,  `\{$0$,
+    $\pm 1$, $\pm 3$\}', or  `zero-one-three'  1-D  lattice;  the  `D1Q5-ZOT  lattice',  defined  as  ``{\swshape  the  shortest
+    integer-valued        discrete        velocity        set        in        the        family        of         five-velocity
+    sets\/}''~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett};                          the                          `D2Q25-ZOT'
+    lattice~\cite{2008-ChikatamarlaSS+KarlinIV-CompPhysComm}, of eight-order isotropy,  obtained  by  extending  the  `D1Q5-ZOT'
+    through a tensor product with itself, so that
+    %
+    \begin{equation}
+        D2Q25\mbox{-ZOT} \equiv (D1Q5\mbox{-ZOT}) \otimes (D1Q5\mbox{-ZOT});
+    \end{equation}
+    %
+    \noindent the `D3Q125-ZOT lattice', also of eight-order iso\-tro\-py, obtained by extending either  the  `D1Q5-ZOT'  or  the
+    `D2Q25-ZOT' lattice through a tensor product between them, so that
+    %
+    \begin{equation}
+        D3Q125\mbox{-ZOT} \equiv (D2Q25\mbox{-ZOT}) \otimes (D1Q5\mbox{-ZOT});
+    \end{equation}
+    %
+    \noindent and also it's prunned version `D3Q41-ZOT', obtained by prunning, or, symmetrically removing velocity subsets.
+
+    For the purpose of this work, it is worth noting that prunning operations deal with discrete velocity groups  of  \emph{same
+    magnitude}; hence, energy levels---so that prunning remove entire energy levels from a departure lattice configuration.
+
+    Several lattice stecils are given in~\cite{2009-SurmasR+PhilippiPC-EurPhysJSpecialTopics} \emph{mostly} in the `DdVb' naming
+    scheme from~\cite{2006-PhilippiPC+SurmasR-PhysRevE}, but also including an `n' suffix, as in D1V9n, D2V28n, and  D3V53n,  as
+    to indicate the lattice is not space-filling, and also in the `\{$0$, $\pm a$, $\pm b$\}' format, in which  $b$  can  be  an
+    explicit multiple of $a$, as in \{$0$, $\pm a$, $\pm 3a$\}, naming schemes. Bravais lattices are given up to  D1V15,  D2V53,
+    and D3V107 in one-, two-, and three- Euclidean spacial dimensions. Appendix tables list full velocity sets as the  `DdVb[n]'
+    naming scheme, in which the `n' suffix is optional, is not fully determined.
+
+    The      following      lattices      are      referenced      in       the       following       works:       a       D2Q36
+    in~\cite[p.~452]{2010-AidunCK+ClausenJR-AnnuRevFluidMech}; a different D2V25,  D2V33,  D2V29-\{l,  r,  rl\},  D3V39,  D2V45,
+    D2V77, rectangular D2Q13R, hexagonal D2V19H (also referred to as `GBL', after Grosfils, Boon and Lallemand), D2V55H, D2V85H,
+    and D2V115H, the last three of fifth, sixth, and seventh order, respectively, and D3V107 in~\cite{2010-HegeleLA-DrUFSC};  an
+    unnamed  one,  described  as   `a   ninth-order   accurate   Gauss-Hermite   quadrature   formula   in   three   dimensions'
+    in~\cite{2008-NieX+ChenH-PhysRevE} having 121 velocities in three-dimensional Euclidean space.
+
+    Spherical shell `SLB$(N; K, L, M)$' lattices---of order $N$,  $K$  spherical  shells,  $L$  shell  latitudes,  each  $K$-$L$
+    intersection circle with $M$ uniformly distributed  discrete  velocities,  so  that  models  have  $K  \times  L  \times  M$
+    velocities---with $1 \leqslant N \leqslant  7$,  $K,  L  >  N$,  and  $M  >  2N$,  i.e.,  SLB(1;~2,~2,~3),  SLB(2;~3,~3,~5),
+    SLB(3;~4,~4,~7), SLB(4;~5,~5,~9), and so  on  up  to  SLB(7;  8,  8,  15),  and  even  an  SLB(N;  20,  20,  17)  are  given
+    in~\cite{2012-AmbrusVE+SofoneaV-PhysRevE}, the last ones having, respectively, 960 and 6800 velocities!
+
+    Rhombic     D2Q9,     rectangular     D2R11,     and     orthorhombic     Bravais     D3R23     lattices      are      found
+    in~\cite{2013-HegeleJr+PhilippiPC-JSciComput}.
+
+    Mattila  and  co-authors~\cite{2013-MattilaKK+PhilippiPC-IntJModPhysC}  have  shown  that  spurious  currents  emerge  along
+    liquid-vapor interface in multiphase simulations. They have shown that  higher-order  stencils,  such  as  the  fourth-order
+    D2V37, yields more localized and isotropic spurious currents than lower order ones, such as third-order D2V17 and  D2Q25-ZOT
+    ones.   Thus,   multiphase   flows   became   another    application    calling    for    multi-speed,    higher-order    LB
+    methods~\cite{2014-SiebertDN+MattilaKK-PhysRevE}.
+
+    In fact, shortly after, the group published~\cite{2014-MattilaKK+PhilippiPC-SciWorldJ} prescribed  abscissas  derived  D2V81
+    and D2V141 lattices, along with an equivalent, however far simpler,  form  of  the  prescribed  abscissas  method  in  their
+    Section~2.
+
+    Reference~\cite{2014-MengJ+ZhangY-JComputPhys} lists lattice  velocities,  weights  and  scaling  factor  for  D2Q16,  D2Q17
+    (reference~\cite{2007-SiebertDN+PhilippiPC-IntJModPhysC}'s D2V17 and reference~\cite{2010-ShanX-PhysRevE}'s $E_{2,7}^{17}$),
+    D2Q37   (reference~\cite{2006-PhilippiPC+SurmasR-PhysRevE}'s   D2V37),   and   for   a   D3Q121,   originally   unnamed   on
+    reference~\cite{2008-NieX+ChenH-PhysRevE}.
+
+    The `D$d$Q$b^d$' notation---as in D$3$Q$5^3$, D$2$Q$7^2$, D$3$Q$7^3$, and D$3$Q$11^3$---which  make  it  more  apparent  its
+    tensor     product      extension      from      a      lower      dimension      (entropic)      lattice      with      $b$
+    velocities~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett},        appears        in~\cite{2015-FrapolliN+KarlinIV-PhysRevE,
+    2016-FrapolliN+KarlinIV-PhysRevE} in connection to compressible flow applications. In this scheme, if
+    %
+    \begin{align}
+        (D1Qb)^d & \equiv \;\underbrace{(D1Qb) \otimes (D1Qb) \ldots}_{\mbox{($d$ times)}}\;\mbox{, then} \\
+        DdQb^d   & = (D1Qb)^d.
+    \end{align}
+    %
+    It is worth noting that the D$3$Q$7^3$ and D$3$Q$11^3$ lattices have 343 and 1331 velocities, respectively.
+
+    Supersonic flows speeds are comparable to molecular thermal velocity scales, the Mach number being  their  ratio.  Moreover,
+    many supersonic flows have a well defined prevailing flow direction, especially when simple, slender objects move with  high
+    speeds through quiescent media. From an object's reference frame, average molecule velocity populations  are  shifted  by  a
+    representative     flow     speed.     Reference~\cite{2016-FrapolliN+KarlinIV-PhysRevLett},      which      is      followd
+    by~\cite{2020-FrapolliN+KarlinIV-Entropy}, explicitly mentions a `$DdQn^d$' naming scheme, in which  $d$  is  the  Euclidean
+    space dimensionality and $n^d$ is the lattice velocity count, and presents the $D2Q7^2$ lattice, i.e., a D2Q49 one,  in  the
+    (i)~symmetric variety, rest reference frame, and (ii)~shifted variety, comoving reference frame of $U_x = 1$ lattice  units.
+    Better yet, authors  demonstrate  that  departing  from  a  Galilean-invariant  symmetric,  rest  reference  frame  lattice,
+    reference-frame shiftings \emph{do not change} the lattice weights, meaning
+    %
+    \begin{equation}
+        W_i(U, T) = W_i(0, T),
+    \end{equation}
+    %
+    \noindent for arbitrary $U$, where $W_i$'s are the lattice weights in terms of the lattice reference speed and  temperature,
+    and $U$ is the reference frame speed shifting. Better still, the Galilean invariance  property  allow  the  construction  of
+    higher-order lattices through tensor products of lower-order Galilean invariant ones, whether they are shifted or not.
+
+    Therefore, let a symetrical $D1Q7$ lattice, with velocity abscissas $V_7 = \{-3,$ $-2,$ $-1,$ $0,$ $1,$ $2,$ $3\}$,  produce
+    a unit $U_x$-shifted lattice with velocity abscissas $V_7' = \{-2,$ $-1,$ $0,$ $1,$ $2,$ $3,$ $4\}$, then the  velocity  set
+    of the unit $U_x$-shifted $D2Q7^2$ lattice is given by $V_{7x}' \otimes V_{7y}$.
+
+    Body-centered cubic, BCC, lattice arrangements oriund from emphasizing spatial discretization over the momentum one  in  the
+    discretization of the Boltzmann equation in~\cite{2016-NamburiM+AnsumaliS-SciRep} led to  BCC  lattices  named  `RD3Q27'.  A
+    novel    BCC    lattice    model    named    RD3Q67    is     also     proposed     in~\cite{2018-AtifM+AnsumaliS-PhysRevE}.
+    Reference~\cite{2017-LiL+KlausnerJF-IntJHeatMassTran} adds capital roman numerals to  `DdQb'  lattices  depending  on  their
+    underlying relaxation time scheme in Multiple Relaxation Time, MRT, models, thus yielding D2Q9-I to  D2Q9-IV  lattice  model
+    designations.
+
+    Velocity count-based lattice naming ambiguities arose in~\cite{2017-PengY+ZhangJM-MathProblEng}, in which the different  yet
+    homonimous            `D1Q5'            lattices            from            references~\cite{1998-QianYH+ZhouY-EuroPhysLett,
+    2006-ChikatamarlaSS+KarlinIV-PhysRevLett}---one with $\{0,$ $\pm 1,$ $\pm 2\}$, and the other with $\{0,$ $\pm 1,$ $\pm 3\}$
+    velocity sets---were distinguished by an `A' or `B' suffix, making them D1Q5A and D1Q5B.
 
 
 %------------------------------------------------------------------------------------------------------------------------------%
