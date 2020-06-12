@@ -163,16 +163,17 @@
     be stable for supersonic thermal flows~\cite{2006-WatariM+TsutaharaM-PhysA, 2007-WatariM-PhysA}.
 
     %---------------------------------------------------------------------------------------------------------------------------
-    \subsection{Higher-order lattice era}
-
-    \vspace{2.0mm}\noindent\textbf{The year of 2006:}\vspace{1.0mm}
+    \subsection{The Year of 2006}
 
     The year of 2006 is seemingly a landmark for multi-velocity, higher-order LB schemes---and  incidently  for  lattice  naming
-    schemes---as   evidenced   by   the   appearance   of   three   key    publications,    namely    those    of    Shan    and
-    co-authors~\cite{2006-ShanX+ChenH-JFluidMech},  of  Philippi  and  co-authors~\cite{2006-PhilippiPC+SurmasR-PhysRevE},   and
-    Chikatamarla and Karlin~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett}.
+    schemes---as evidenced by the appearance of three key publications, namely those of  Shan,~X.,  Yuan,~X.-F.,  and  Chen,~H.,
+    \cite{2006-ShanX+ChenH-JFluidMech},   of   Philippi,~P.~C.,   Hegele,~L.~A.,   dos    Santos,~L.~O.~E.    and    Surmas,~R.,
+    \cite{2006-PhilippiPC+SurmasR-PhysRevE},        and        of         Chikatamarla,~S.~S.         and         Karlin,~I.~V.,
+    \cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett}.
 
-    A  sistematic  discretization   framework   for   the   Boltzmann   equation   was   proposed   by   Shan   and   co-authors
+    \vspace{2.0mm}\noindent\textbf{Shan and Coauthors:}\vspace{1.0mm}
+
+    A  sistematic  discretization   framework   for   the   Boltzmann   equation   was   proposed   by   Shan   and   coauthors
     in~\cite{2006-ShanX+ChenH-JFluidMech}.  From  Kinetic  theory~\cite{2011-HarrisS-Dover,   2003-LiboffRL-bookSpringer},   the
     authors pointed out that successive Chapman-Enskog approximations of the Boltzmann equation obtain the Euler, Navier-Stokes,
     Burnett, and higher-order macroscopic equations---meaning progressively higher-order moments  of  the  continuous  Boltzmann
@@ -184,7 +185,7 @@
     In these author's discretization framework, the lattice is viewed as a Hermite expansion \emph{quadrature}, and  the  naming
     convention was defined in terms of three parameters, namely, an Euclidean space dimension $D$, a quadrature  velocity  count
     $d$, and an algebraic degree of precision $n$ encoded in an `$E_{D,n}^{d}$' naming scheme---an order-$N$  Hermite  expansion
-    requires      a      quadrature      degree      $n      \geqslant      2N$.      Citing      Qian      and      co-authors'
+    requires      a      quadrature      degree      $n      \geqslant      2N$.      Citing      Qian      and      coauthors'
     lattices~\cite{1992-QianYH+LallemandP-EurophysLett}, they established the following comparisons, which were off  only  by  a
     scaling factor: $D2Q9 \propto E_{2,5}^{9}$, $D3Q15 \propto E_{3,5}^{15}$, and $D3Q19 \propto E_{3,5}^{19}$.
 
@@ -202,8 +203,10 @@
     % Missing details include (i) how to switch from rank-0 polynomial base to the tensorial Hermite one, (ii) and from scalar
     % argument ξ to a vectorial 𝛏 one.
 
+    \vspace{2.0mm}\noindent\textbf{Philippi and Co-authors:}\vspace{1.0mm}
+
     Tackling the aspects associated in deriving space-filling, Bravais  lattices  aiming  at  sufficiently  high  orders  as  to
-    approach thermal hydrodynamic  transport  problems,  Philippi  and  co-authors~\cite{2006-PhilippiPC+SurmasR-PhysRevE}  have
+    approach thermal hydrodynamic  transport  problems,  Philippi  and  coauthors~\cite{2006-PhilippiPC+SurmasR-PhysRevE}  have
     proposed a new \emph{Method of Prescribed Abscissas\/}, MPA, for obtaining lattice weight values  and  scaling  factor  from
     predefined lattice arrangements.
 
@@ -223,7 +226,7 @@
         macroscopic equilibrium moments are to be correctly described in [lattice-Boltzmann methods,]''
     \end{quote}
     %
-    \noindent which is homologous to many Shan and co-author's statements~\cite{2006-ShanX+ChenH-JFluidMech}. Observations  like
+    \noindent which is homologous to many Shan and coauthor's statements~\cite{2006-ShanX+ChenH-JFluidMech}. Observations  like
     these, allied to the new and consistent methods  of  deriving  higher-order  LB  stencils  by  Gauss-Hermite  or  Prescribed
     Abscissas quadratures, allowed for the immediate  and  subsequent  appearance  of  many-velocity  lattices  in  2D-  and  in
     3D-Euclidean spaces, many of which requiring changes or adaptations in the naming scheme, as the sequence will show.
@@ -233,6 +236,8 @@
     D2V25(W1) and D2V25(W6), containing the energy levels $\epsilon \in \{0, 2, 4, 8, 9, 16, 18\}$, and $\epsilon \in \{0, 1, 2,
     4, 8, 9, 16\}$, respectively---thus without weights labeled `1' and `6'---and  (iv)~a  fourth-order  Hermite  ($N=4$)  D2V37
     lattice, suitable for thermal flow LB simulations.
+
+    \vspace{2.0mm}\noindent\textbf{Chikatamarla and Karlin:}\vspace{1.0mm}
 
     Seeking  to  systematically   derive   \emph{stable}   and   \emph{Galilean   invariant}   LB   models,   Chikatamarla   and
     Karlin~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett} set about the problem of LB stencil construction from a discrete form
