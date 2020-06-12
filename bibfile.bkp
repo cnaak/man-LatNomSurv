@@ -1584,17 +1584,3 @@ abstract = "Recently, a general theory of constructing lattice Boltzmann models 
     pages={370},
 }
 
-% Encoding: UTF-8
-
-@Book{2011-MohamadAA-Springer,
-  title     = {Lattice {B}oltzmann method: fundamentals and engineering applications with computer codes},
-  publisher = {Springer},
-  year      = {2011},
-  author    = {Mohamad, A. A.},
-  address   = {London Dordrecht Heidelberg New York},
-  isbn      = {978-0-85729-454-8},
-  doi       = {10.1007/978-0-85729-455-5},
-}
-
-@Comment{jabref-meta: databaseType:bibtex;}
-
