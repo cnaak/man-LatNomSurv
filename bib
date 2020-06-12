@@ -94,17 +94,17 @@ function _lstBib() {
 
 function listBib() {
     if [ "$#" -lt 1 ]; then
-        _listBib()
+        _listBib;
     else
-        _listBib() | grep "$1"
+        _listBib | grep "$1";
     fi
 }
 
 function lstBib() {
     if [ "$#" -lt 1 ]; then
-        _lstBib()
+        _lstBib;
     else
-        _lstBib() | grep "$1"
+        _lstBib | grep "$1";
     fi
 }
 
