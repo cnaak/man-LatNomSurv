@@ -91,6 +91,77 @@
     1993-QianYH+OrszagSA-EuroPhysLett}---that seems to be the most prevalent lattice naming system  to  date,  although  notable
     exceptions appear long after the paper~\cite{1991-QianYH+LallemandP-AdvKinTheoContMech} came out in 1991.
 
+    As far as increasing lattice velocity counts go, the relationship between mesoscopic lattice \emph{symmetry}  and  resulting
+    macroscopic   description   \emph{isotropy}   has   been   established    from    early    in    the    history    of    LGA
+    methods~\cite{1973-HardyJ+PazzisO-JMathPhys, 1976-HardyJ+PomeauY-PhysRevA},  in  two~\cite{1986-FrischU+PomeauY-PhysRevLett}
+    and  in  three  Euclidean   dimensions,   the   latter   requiring   the   lattice   to   include   links   beyond   nearest
+    neighbors~\cite[pp.~473, 490]{1986-WolframS-JStatPhys}, hence particle velocities with unequal magnitudes.
+
+    Moreover, Koelman~\cite{1991-KoelmanJMVA-EurophysLett} had proposed matching discrete velocity moments up to a certain order
+    $n$ with the $d$-dimensional continuous Boltzmann distribiution, since only those moments  influence  the  macroscopic  flow
+    behaviour; such procedure would yield values for lattice velocity \emph{weights} $W_{\alpha}$---nowadays $w_i$. The proposed
+    criteria   were   deemed   more   stringent   than   previously    well-known    symmetry    and    isotropy    requirements
+    from~\cite{1986-WolframS-JStatPhys}, since it not only led to an isotropic macroscopic description, but also ensure pressure
+    term independence from velocity terms of the Navier-Stokes description. Furthermore, a skewed  rectangular  9-speed  lattice
+    with independent $a$ and $b$ axis lengths was proposed\footnote{That lattice was named  `face-centred  rectangular'  by  the
+    author.}, whose weights exactly recover those of the well-known D2Q9 lattice for $a = b$, over which the argument that valid
+    weights `[...] \emph{can  always  be  found  by  choosing  a  large  enough  set  of}  (lattice)  \emph{velocity  vectors\/}
+    [...]'~\cite{1991-KoelmanJMVA-EurophysLett}.
+
+    One    driving    application     for     increased     velocity     count     lattices     is     thermal     flows.     On
+    reference~\cite{1993-AlexanderFJ+SterlingJD-PhysRevE} an \emph{unnamed}  2D,  hexagonal  (triangular),  13-velocity  lattice
+    having velocity magnitudes of 0,  1,  and  2  lattice  units~\cite{1998-ChenS+DoolenGD-AnnuRevFluidMech}  was  employed  for
+    adiabatic sound propagation and heat transfer Couette flow, whose results were shown to be in agreement  with  corresponding
+    analytical solutions.
+
+    Some `nDmV' lattices, with $n$ being the Euclidean space dimension and $m$ the lattice velocity count, namely, 1D5V,  2D16V,
+    and 3D40V, were introduced in~\cite{1994-ChenY+AkiyamaM-PhysRevE} for  shock  wave  front  structure  and  shear  wave  flow
+    application cases. The 2D16V lattice was said to be comprised of four \emph{sublattices}, a term that appeared in subsequent
+    references, with each sublattice having 4 discrete velocities of same magnitude and forming adjacent right angles, which led
+    to possibly multiple sublattices per lattice energy level $\epsilon \equiv 2e = \xi^2$, with  $\xi$  being  the  microscopic
+    (lattice) velocity magnitude, and $e$ the corresponding specific kinetic energy, as was the case with the $\epsilon = 1^2  +
+    2^2 = 5$ energy level of a square lattice, represented by the 8 discrete velocities ($\pm\{1,2\}$, $\pm\{2,1\}$) in  lattice
+    units. This is in contrast to the seemingly prevailing current view of a multiple-velocity lattice being  a  single  lattice
+    entity, without explicit reference to sublattices.
+
+    \vspace{2.0mm}\noindent\textbf{Later 1990's and early 2000's:}\vspace{1.0mm}
+
+    Most likely borrowing from mesh-based CFD methods, a study~\cite{1996-HeX+DemboM-JComputPhys} has proposed  a  LB  algorithm
+    for non-uniform mesh grids, by decoupling spatial and momentum space  discretizations  in  the  LB  scheme.  The  underlying
+    momentum space discretization was the well-known D2Q9 lattice, referred to in the study as `9-bit BGK model in 2D space' and
+    semantic variations thereof, in which BGK  stands  for  Kinetic  theory's  Bhatnagar-Gross-Krook  collision  model  for  the
+    continuous Boltzmann equation~\cite{1954-BhatnagarPL+KrookM-PhysRev, 2003-LiboffRL-bookSpringer, 2011-HarrisS-Dover}.
+
+    Nine years after the debut of LB methods, a study~\cite{1997-HeX+LuoLS-PhysRevE} showed that they could be directly  derived
+    from    the    continuous    Boltzmann    equation    with    linearized    collision     operator     under     the     BGK
+    approximation~\cite{2011-HarrisS-Dover}, while lattice stencils  from  requirements  of  matching  continuous  and  discrete
+    velocity moments up to a desired order---a decisive publication,  not  only  in  making  LB  methods  independent  from  its
+    historical predecessor LGA, but also to pave the way towards modern methods  for  lattice  weights  determination  from  the
+    lattice  velocity  set~\cite{2014-MattilaKK+PhilippiPC-SciWorldJ}.  The  lattices   in~\cite{1997-HeX+LuoLS-PhysRevE}   were
+    verbosely referred to as `$d$-dimensional $b$-bit $g$ lattice model', with $d$ being the Euclidean space dimension, $b$  the
+    lattice velocity count, and $g$ a geometry term, such as `triangular,' etc.
+
+    A review article by Shen and  Doolen~\cite{1998-ChenS+DoolenGD-AnnuRevFluidMech}  published  a  decade  after  McNamara  and
+    Zanetti's premiere LB publication~\cite{1988-McNamaraGR+ZanettiG-PhysRevLett} and seven years after Qian's paper introducing
+    the now-prevailing `DdQb' lattice naming scheme~\cite{1991-QianYH+LallemandP-AdvKinTheoContMech}, would still  refer  to  LB
+    lattices either with LGA-style or verbose nomenclatures, and to overall LB schemes based on its  collision  term  treatment,
+    such    as    `lattice    BGK    (LBGK)'    models.
+
+    Higher-order lattices were proposed  in~\cite{1998-PavloP+VahalaL-PhysRevLett}  for  two-  and  three-dimensional  Euclidean
+    spaces. They were referred to as `octagonal grid (17-bit),' and as `3D ``octagonal'' 53-bit' models, respectively, and  were
+    isotropic up to the sixth-order. Since octagons are not space-filling, plane-tiling geometries, the proposed  lattices  were
+    not of the Bravais type, meaning they impose a decoupling between the spatial and the  momentum  space  discretizations,  as
+    with the non-uniform mesh~\cite{1996-HeX+DemboM-JComputPhys}, and the method has to  resort  to  interpolations,  which  was
+    later shown to cause spurious numerical diffusion~\cite[p.~429]{2006-ShanX+ChenH-JFluidMech}.
+
+    Other     lattice     namings     of     the     early-     and     mid-2000's     include     verbose,     spelled      out
+    ones~\cite{2001-dHumieresD+LallemandP-PhysRevE,   2005-LuXY-IntJModPhysC};   a   `$D_dQ_b$'   variant   of   Qian's   `DdQb'
+    scheme~\cite{2003-NourgalievRR+JosephD-IntJMulFlow};     a     `groupI'     to     `groupIV'     regular     2D      polygon
+    variant~\cite{2003-WatariM+TsutaharaM-PhysRevE, 2007-WatariM-PhysA}; a `$b$  ($d$D)'  short  designation  for  an  otherwise
+    verbose one~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett}; an explicit lattice units velocity list, such as `$\{0, \pm  1,
+    \pm 3\}$', in~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett}; a `dodecahedron' and an `icosahedron' ones that were shown to
+    be stable for supersonic thermal flows~\cite{2006-WatariM+TsutaharaM-PhysA, 2007-WatariM-PhysA}.
+
 
 
 %------------------------------------------------------------------------------------------------------------------------------%
