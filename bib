@@ -68,7 +68,7 @@ function letItBib() {
     fi;
 }
 
-function listBib() {
+function _listBib() {
     if hasBib; then
         uline "Key list for file '${THEBIB}':"
         grep '^@' "${THEBIB}" |\
@@ -80,7 +80,7 @@ function listBib() {
     fi;
 }
 
-function lstBib() {
+function _lstBib() {
     if hasBib; then
         grep '^@' "${THEBIB}" |\
             grep -v '^@Comment' |\
@@ -90,6 +90,22 @@ function lstBib() {
     else
         exit -1;
     fi;
+}
+
+function listBib() {
+    if [ "$#" -lt 1 ]; then
+        _listBib()
+    else
+        _listBib() | grep "$1"
+    fi
+}
+
+function lstBib() {
+    if [ "$#" -lt 1 ]; then
+        _lstBib()
+    else
+        _lstBib() | grep "$1"
+    fi
 }
 
 function dbase() {
@@ -147,9 +163,9 @@ case "${COMM}" in
     "help" | "HELP")
         help 0;;
     "LIST")
-        listBib;;
+        listBib "$@";;
     "LST")
-        lstBib;;
+        lstBib "$@";;
     "BASE")
         dbase;;
     "ADD")
