@@ -162,6 +162,118 @@
     \pm 3\}$', in~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett}; a `dodecahedron' and an `icosahedron' ones that were shown to
     be stable for supersonic thermal flows~\cite{2006-WatariM+TsutaharaM-PhysA, 2007-WatariM-PhysA}.
 
+    %---------------------------------------------------------------------------------------------------------------------------
+    \subsection{Higher-order lattice era}
+
+    \vspace{2.0mm}\noindent\textbf{The year of 2006:}\vspace{1.0mm}
+
+    The year of 2006 is seemingly a landmark for multi-velocity, higher-order LB schemes---and  incidently  for  lattice  naming
+    schemes---as   evidenced   by   the   appearance   of   three   key    publications,    namely    those    of    Shan    and
+    co-authors~\cite{2006-ShanX+ChenH-JFluidMech},  of  Philippi  and  co-authors~\cite{2006-PhilippiPC+SurmasR-PhysRevE},   and
+    Chikatamarla and Karlin~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett}.
+
+    A  sistematic  discretization   framework   for   the   Boltzmann   equation   was   proposed   by   Shan   and   co-authors
+    in~\cite{2006-ShanX+ChenH-JFluidMech}.  From  Kinetic  theory~\cite{2011-HarrisS-Dover,   2003-LiboffRL-bookSpringer},   the
+    authors pointed out that successive Chapman-Enskog approximations of the Boltzmann equation obtain the Euler, Navier-Stokes,
+    Burnett, and higher-order macroscopic equations---meaning progressively higher-order moments  of  the  continuous  Boltzmann
+    equation express progressively higher-order macroscopic thermohydrodynamic descriptions. Moreover, the authors  demonstrated
+    that   projecting   the   Boltzmann   equation   onto   order-$N$   truncated   tensorial   Hermite   polynomial   expansion
+    bases~\cite{1949-GradH-CommPureApplMath}, lead to discrete LB models of corresponding  order-$N$  moments,  since  resulting
+    Hermite expansion coefficients correspond to the velocity moments up to the chosen order.
+
+    In these author's discretization framework, the lattice is viewed as a Hermite expansion \emph{quadrature}, and  the  naming
+    convention was defined in terms of three parameters, namely, an Euclidean space dimension $D$, a quadrature  velocity  count
+    $d$, and an algebraic degree of precision $n$ encoded in an `$E_{D,n}^{d}$' naming scheme---an order-$N$  Hermite  expansion
+    requires      a      quadrature      degree      $n      \geqslant      2N$.      Citing      Qian      and      co-authors'
+    lattices~\cite{1992-QianYH+LallemandP-EurophysLett}, they established the following comparisons, which were off  only  by  a
+    scaling factor: $D2Q9 \propto E_{2,5}^{9}$, $D3Q15 \propto E_{3,5}^{15}$, and $D3Q19 \propto E_{3,5}^{19}$.
+
+    Additionally, they stablished that Gauss-Hermite quadratures of the Boltzmann equation yield LB  models  with  \emph{minimum
+    velocity count} for given degree of precision and Euclidean spacial dimension, without, however, the  ability  to  predefine
+    (choose) the discrete velocity abscisae,  which  apart  from  special  cases  fails  to  produce  a  space-filling,  Bravais
+    lattice---recalling that for LB methods, this means lower memory requirements but decoupled spatial  and  momentum  `meshes'
+    that require interpolations, thus introducing artifacts such as spurious numerical diffusion.
+
+    In the Appendix of reference~\cite{2006-ShanX+ChenH-JFluidMech}, the authors include a brief discussion  with  some  missing
+    details on deriving quadratures on predefined Cartesian abscissae, which is the main requirement for space-filling,  Bravais
+    lattices for non-interpolating, exact advection LB schemes. Results for the space-filling $E_{2,7}^{17}$ and  $E_{3,7}^{39}$
+    quadratures were listed among the ones obtained with Gauss-Hermite quadratures.
+
+    % Missing details include (i) how to switch from rank-0 polynomial base to the tensorial Hermite one, (ii) and from scalar
+    % argument ξ to a vectorial 𝛏 one.
+
+    Tackling the aspects associated in deriving space-filling, Bravais  lattices  aiming  at  sufficiently  high  orders  as  to
+    approach thermal hydrodynamic  transport  problems,  Philippi  and  co-authors~\cite{2006-PhilippiPC+SurmasR-PhysRevE}  have
+    proposed a new \emph{Method of Prescribed Abscissas\/}, MPA, for obtaining lattice weight values  and  scaling  factor  from
+    predefined lattice arrangements.
+
+    Departing from the continuous Boltzmann equation, the derivation of discrete velocity sets, i.e., the lattice  vectors,  was
+    considered as a quadrature problem, in the senses that (i)~weights $w_i$ for lattice velocities $\pmb{\xi}_i$ would be found
+    so that moments of the discrete equilibrium mass  distribution  function  $f^{eq}_i$  would  exactly  match  its  continuous
+    counterpart, and (ii)~to warrant even-ranked velocity tensor isotropy, which,  in  turn,  translates  into  isotropic  fluid
+    transport properties. In the process, authors derived, according to their Eq.~\{6\}, that \emph{lattice velocity weights are
+    functions of velocity magnitudes}; hence, of lattice energy levels. This outcome is central to  the  lattice  naming  scheme
+    herein proposed.
+
+    In their prescribed abscissas quadrature discussion, authors state that~\cite[p.~6]{2006-PhilippiPC+SurmasR-PhysRevE}:
+    %
+    \begin{quote}
+        \swshape
+        ``[...]~$N$th-order approximation to the [Maxwell-Boltzmann]  equilibrium  distribution  is  required  when  $N$th-order
+        macroscopic equilibrium moments are to be correctly described in [lattice-Boltzmann methods,]''
+    \end{quote}
+    %
+    \noindent which is homologous to many Shan and co-author's statements~\cite{2006-ShanX+ChenH-JFluidMech}. Observations  like
+    these, allied to the new and consistent methods  of  deriving  higher-order  LB  stencils  by  Gauss-Hermite  or  Prescribed
+    Abscissas quadratures, allowed for the immediate  and  subsequent  appearance  of  many-velocity  lattices  in  2D-  and  in
+    3D-Euclidean spaces, many of which requiring changes or adaptations in the naming scheme, as the sequence will show.
+
+    Immediate examples~\cite{2006-PhilippiPC+SurmasR-PhysRevE} include (i)~\emph{two} forms of bidimensional, 17-velocity  ones,
+    named D2Q17 and D2V17; (ii)~a D2Q21 one; as well  as  (iii)~\emph{two}  forms  of  bidimensional,  25-velocity  ones,  named
+    D2V25(W1) and D2V25(W6), containing the energy levels $\epsilon \in \{0, 2, 4, 8, 9, 16, 18\}$, and $\epsilon \in \{0, 1, 2,
+    4, 8, 9, 16\}$, respectively---thus without weights labeled `1' and `6'---and  (iv)~a  fourth-order  Hermite  ($N=4$)  D2V37
+    lattice, suitable for thermal flow LB simulations.
+
+    Seeking  to  systematically   derive   \emph{stable}   and   \emph{Galilean   invariant}   LB   models,   Chikatamarla   and
+    Karlin~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett} set about the problem of LB stencil construction from a discrete form
+    of Boltzmann's H-theorem---in which the  $(-H)$  quantity  represents  a  sort  of  generalized  thermodynamic  entropy  for
+    non-equilibrium states in the Boltzmann Gas Limit (BGL) that increases according to the second law of  thermodynamics  until
+    equilibrium is reached~\cite{2011-HarrisS-Dover}. By maximizing the entropy, i.e., by minimizing $H$,
+    %
+    \begin{equation}
+        H = \sum_{i=1}^{N}f_i\ln\left(\frac{f_i}{w_i}\right),
+    \end{equation}
+    %
+    \noindent with appropriately chosen weights $w_i$ under a set of macroscopic constraints of mass and energy conservation  as
+    well as constitutive relations for higher-order macroscopic tensors, authors arrived at \emph{explicit} expressions for  the
+    weights $w_i$ and for the stencil reference temperature for several one-dimensional  lattice  models  having  from  3  to  5
+    velocities. Methods obtained by this systematic were named `entropic' LB methods (ELBM).
+
+    Remarkably, due to a pattern in Gauss-Hermite  quadrature~\cite{2003-AnsumaliS+OettingerHC-EuroPhysLett},  Chikatamarla  and
+    Karlin       proposed       a       straightforward       way       of       obtaining       higher-dimension        lattice
+    stencils~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett}:
+
+    \begin{quote}
+        \swshape
+        ``[...]~discrete velocities [$\pmb{\xi}_i$] in the $D$-dimensional case  are  tensor  products  of  $D$  copies  of  the
+        one-dimensional velocities, whereas the corresponding weights  [$w_i$]  are  algebraic  products  of  the  corresponding
+        weights in one dimension.''
+    \end{quote}
+
+    As the immediate examples of~\cite{2006-PhilippiPC+SurmasR-PhysRevE} evidence, as soon as one allows for  including  several
+    energy levels (but not necessarily all, nor in monotonic order) in a Bravais lattice,  velocity  count  no  longer  uniquely
+    identifies lattices, and thus, \emph{velocity count-based lattice naming schemes are  bound  to  be  ambiguous  and  require
+    additional information as to uniquely identify the lattice.\/} Usually, the additional information is laying out  \emph{all}
+    velocity vectors, whether by energy level listings, a quiver-like lattice picture,  or  tabulated  lattice  velocities  (and
+    weights)---all of which seem, to varying degrees, excessively wordy and lengthy.  Moreover,  the  very  need  for  providing
+    additional information as to uniquely identify an already named lattice seems to defeat the purpose of naming them, at least
+    partly.
+
+    %---------------------------------------------------------------------------------------------------------------------------
+    \subsection{Higher-order lattice proliferation}
+
+
+
 
 
 %------------------------------------------------------------------------------------------------------------------------------%
