@@ -1,0 +1,99 @@
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           Packages                                                           %
+%------------------------------------------------------------------------------------------------------------------------------%
+\usepackage{booktabs}
+\usepackage[english]{babel}
+\usepackage[squaren,cdot]{SIunits}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{pslatex}
+\usepackage[lining]{ebgaramond}
+\usepackage{xspace}
+%-------------------------------------------------------------------------------------------------------------------------------
+\usepackage[hyperindex,breaklinks]{hyperref} % Required for hyperlinks
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           Commands                                                           %
+%------------------------------------------------------------------------------------------------------------------------------%
+\hypersetup{%
+    hidelinks,
+    colorlinks,
+    breaklinks=true,
+    urlcolor=color3,
+    citecolor=color1,
+    linkcolor=color1,
+    bookmarksopen=false,
+    pdftitle={Title},
+    pdfauthor={Author}
+}
+%-------------------------------------------------------------------------------------------------------------------------------
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\columnsep}{5.5mm}
+\setlength{\columnseprule}{0.2pt}
+\setlength{\fboxrule}{0.4pt} % Width of the border around the abstract
+%-------------------------------------------------------------------------------------------------------------------------------
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+\definecolor{color3}{RGB}{0,0,192} % Color of the article title and sections
+%-------------------------------------------------------------------------------------------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+%-------------------------------------------------------------------------------------------------------------------------------
+\newcommand{\XXX}[1]{\relax}
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           Metadata                                                           %
+%------------------------------------------------------------------------------------------------------------------------------%
+\makeatletter
+\immediate\write18{datelog > \jobname.info}
+\makeatother
+%-------------------------------------------------------------------------------------------------------------------------------
+% Journal information
+\JournalInfo{engrXiv}
+\Archive{Compiled on \input{\jobname.info} -- Version \input{PreprintVersion.tex}}
+% Article title
+\PaperTitle{Lattice Nomenclature Survey from LGA to Modern LBM}
+\Authors{%
+    C.~Naaktgeboren\textsuperscript{1$\star$},
+    F.~N.~de Andrade\textsuperscript{2}
+}
+\affiliation{%
+    \textsuperscript{1}%
+    \textit{%
+        Adjunct Professor.
+        Universidade Tecnológica Federal do Paraná -- UTFPR, Câmpus Guarapuava.
+        Grupo de Pesquisa em Ciências Térmicas.
+}}
+\affiliation{%
+    \textsuperscript{2}%
+    \textit{%
+        Universidade Tecnológica Federal do Paraná -- UTFPR, Câmpus Guarapuava.
+        Grupo de Pesquisa em Ciências Térmicas.
+}}
+\affiliation{%
+    \textsuperscript{$\star$}%
+    \textbf{Corresponding  author}: NaaktgeborenC$\cdot$PhD@gmail$\cdot$com
+}
+\Keywords{%
+    lattice-Boltzmann stencils ---
+    lattice-Boltzmann models ---
+    lattice nomenclature systems ---
+    high-order lattices.
+}
+\newcommand{\keywordname}{Keywords}
+\Highlights{%
+    Surveys lattice nomenclature systems in the hystory of LBM: from the LGA to current times ---
+    Discusses lattice categories, competing standards, naming ambiguity, model parameter scope.
+}
+\newcommand{\highlightname}{Highlights}
+%-------------------------------------------------------------------------------------------------------------------------------
+\Abstract{%
+    Lattice configuration is a core parameter in Lattice-Boltzmann  (LB)  methods,  both  from  theoretical  and  implementation
+    standpoints. As LB methods have progressed over the past decades, a variety of lattice configurations have been proposed and
+    refered to according to a plurality  of  lattice  nomenclature  systems  that  usually  include  the  Euclidean  \emph{space
+    dimensionality}, the lattice \emph{velocity count} and, in fewer instances, the \emph{discretization order} in their format.
+    This work surveys lattice nomenclature systems, or lattice naming schemes, along the history of LB  methods,  starting  from
+    its Lattice Gas Automata (LGA) predecessor, up to the present time. Findings include multiple lattice categories,  competing
+    naming standards, ambiguous names particularly in higher-order models, naming systems of varying model parameter scopes, and
+    lack of unambiguous naming schemes.
+}
+%-------------------------------------------------------------------------------------------------------------------------------
