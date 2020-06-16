@@ -74,11 +74,7 @@ function preChange() {
     # Implement me
 }
 
-function letItBib() {
-}
-
 function _listBib() {
-    letItBib
     uline "Key list for file '${THEBIB}':"
     grep '^@' "${THEBIB}" |\
         grep -v '^@Comment' |\
@@ -87,7 +83,6 @@ function _listBib() {
 }
 
 function _lstBib() {
-    letItBib
     grep '^@' "${THEBIB}" |\
         grep -v '^@Comment' |\
         sed 's|^.*{||g' |\
@@ -129,7 +124,6 @@ function keysOf() {
 }
 
 function addBib() {
-    letItBib
     if [ "$#" -lt 1 ]; then
         echo -e "ERROR: Missing arguments to ADD.\n"
         help -1;
@@ -152,7 +146,7 @@ function addBib() {
 }
 
 function remBib() {
-    CURKEY="$(./bib LST)"                           # This will letItBib
+    CURKEY="$(./bib LST)"
     REMKEY="$(echo $@ | sed 's| |\n|g')"
     DIFKEY="$(echo "${CURKEY}" | grep -v "${REMKEY}")"
     echo -e "INFO: x ALL KEYS."
@@ -162,7 +156,7 @@ function remBib() {
 
 function sortBib() {
     echo -e "INFO: Sorting '${THEBIB}'";
-    remBib "$(md5sum ${THEBIB} | cut -f1 -d' ')"    # This will letItBib
+    remBib "$(md5sum ${THEBIB} | cut -f1 -d' ')"
 }
 
 function bibBkp() {
