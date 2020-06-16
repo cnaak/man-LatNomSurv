@@ -72,15 +72,15 @@ function preQuery() {
 
 function preChange() {
     if hasBib; then
-        echo -e "INFO: Backing up existing '${THEBIB}' into '${BKPBIB}'";
-        cp -f "${THEBIB}" "${BKPBIB}"
+        echo -e "INFO: Backing up existing '${THEBIB}' into '${BKPBIB}'" 1>&2
+        cp -f "${THEBIB}" "${BKPBIB}" 1>&2
     elif hasBkp; then
-        echo -e "INFO: Restored missing '${THEBIB}' from '${BKPBIB}'"
-        cp -f "${BKPBIB}" "${THEBIB}";
+        echo -e "INFO: Restored missing '${THEBIB}' from '${BKPBIB}'" 1>&2
+        cp -f "${BKPBIB}" "${THEBIB}" 1>&2
     else
-        echo -e "INFO: Missing '${THEBIB}' and '${BKPBIB}'. Created empty ones."
-        cp -f /dev/null "${THEBIB}";
-        cp -f /dev/null "${BKPBIB}";
+        echo -e "INFO: Missing '${THEBIB}' and '${BKPBIB}'. Created empty ones." 1>&2
+        cp -f /dev/null "${THEBIB}" 1>&2
+        cp -f /dev/null "${BKPBIB}" 1>&2
     fi;
 }
 
