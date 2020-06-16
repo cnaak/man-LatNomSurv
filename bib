@@ -147,13 +147,13 @@ function addBib() {
             if grep -q "$(keysOf ${BIBSRC})" "${THEBIB}"; then
                 for BIBKEY in $(keysOf ${BIBSRC}); do
                     echo -e "INFO: x '${BIBKEY}' (from ${BIBSRC})."
-                done;
+                done
             else
                 for BIBKEY in $(keysOf ${BIBSRC}); do
                     echo -e "INFO: + '${BIBKEY}' (from ${BIBSRC})."
-                done;
+                done
                 cat $(find -L . -name "${BIBSRC}.bib") >> "${THEBIB}"
-                echo "" >> "${THEBIB}";
+                echo "" >> "${THEBIB}"
             fi
         done
     done
