@@ -37,13 +37,13 @@ SYNOPSIS
 AUTHOR
     Naaktgeboren, C.
 ____EOF
-    exit ${1:--1};
+    exit ${1:--1}
 }
 
 # Argument check
 if test "a${1}" == "a"; then
     echo -e "ERROR: not enough arguments.\n"
-    help -1;
+    help -1
 fi
 
 # Functionality
@@ -67,7 +67,7 @@ function preQuery() {
     else
         echo -e "INFO: Created empty '${THEBIB}'" 1>&2
         cp -f /dev/null "${THEBIB}" 1>&2
-    fi;
+    fi
 }
 
 function preChange() {
@@ -81,7 +81,7 @@ function preChange() {
         echo -e "INFO: Missing '${THEBIB}' and '${BKPBIB}'. Created empty ones." 1>&2
         cp -f /dev/null "${THEBIB}" 1>&2
         cp -f /dev/null "${BKPBIB}" 1>&2
-    fi;
+    fi
 }
 
 function _listBib() {
@@ -89,7 +89,7 @@ function _listBib() {
     grep '^@' "${THEBIB}" |\
         grep -v '^@Comment' |\
         sort -n |\
-        sed 's|^|\t|g';
+        sed 's|^|\t|g'
 }
 
 function _lstBib() {
@@ -97,26 +97,26 @@ function _lstBib() {
         grep -v '^@Comment' |\
         sed 's|^.*{||g' |\
         sed 's|, *$||g' |\
-        sort -n;
+        sort -n
 }
 
 function listBib() {
     if [ "$#" -lt 1 ]; then
-        _listBib;
+        _listBib
     else
         p="$1"
         shift
-        listBib | grep "$p";
+        listBib | grep "$p"
     fi
 }
 
 function lstBib() {
     if [ "$#" -lt 1 ]; then
-        _lstBib;
+        _lstBib
     else
         p="$1"
         shift
-        lstBib "$@" | grep "$p";
+        lstBib "$@" | grep "$p"
     fi
 }
 
@@ -134,7 +134,7 @@ function keysOf() {
         grep -v '^@Comment' |\
         sed 's|^.*{||g' |\
         sed 's|, *$||g' |\
-        sort -n;
+        sort -n
 }
 
 function addBib() {
@@ -217,7 +217,7 @@ case "${COMM}" in
     #                               Invalid                                #
     #----------------------------------------------------------------------#
     *)
-        echo -e "ERROR: invalid command: '${1}'.\n"
+        echo -e "ERROR: invalid command: '${1}'.\n" 1>&2
         help -1;;
 esac
 
