@@ -143,7 +143,7 @@ function addBib() {
 }
 
 function remBib() {
-    CURKEY="$(./bib LST)"
+    CURKEY="$(./bib LST)"   # This will letItBib
     REMKEY="$(echo $@ | sed 's| |\n|g')"
     DIFKEY="$(echo "${CURKEY}" | grep -v "${REMKEY}")"
     echo -e "INFO: x ALL KEYS."
