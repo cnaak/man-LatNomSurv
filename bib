@@ -166,6 +166,13 @@ case "${COMM}" in
         listBib "$@";;
     "LST")
         lstBib "$@";;
+    "BACKUP")
+        if hasBib; then
+            echo -e "INFO: Backing up '${THEBIB}' into '${BKPBIB}'"
+            cp -vf "${THEBIB}" "${BKPBIB}";;
+        else
+            echo -e "INFO: Nothing to backup"
+        fi;;
     "BASE")
         dbase;;
     "ADD")
