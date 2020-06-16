@@ -78,15 +78,12 @@ function _listBib() {
 }
 
 function _lstBib() {
-    if hasBib; then
-        grep '^@' "${THEBIB}" |\
-            grep -v '^@Comment' |\
-            sed 's|^.*{||g' |\
-            sed 's|, *$||g' |\
-            sort -n;
-    else
-        exit -1;
-    fi;
+    letItBib
+    grep '^@' "${THEBIB}" |\
+        grep -v '^@Comment' |\
+        sed 's|^.*{||g' |\
+        sed 's|, *$||g' |\
+        sort -n;
 }
 
 function listBib() {
