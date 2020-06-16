@@ -173,15 +173,6 @@ function sortBib() {
     remBib "$(md5sum ${THEBIB} | cut -f1 -d' ')"
 }
 
-function bibBkp() {
-    if hasBib; then
-        echo -e "INFO: Backing up '${THEBIB}' into '${BKPBIB}'"
-        cp -f "${THEBIB}" "${BKPBIB}"
-    else
-        echo -e "INFO: Nothing to backup"
-    fi
-}
-
 # MAIN - Parse commands
 COMM="${1}"
 shift
@@ -212,8 +203,7 @@ case "${COMM}" in
         preChange
         addBib "$@";;
     "BACKUP")
-        preChange
-        bibBkp;;
+        preChange;;
     "REM")
         cp "${THEBIB}" "${BKPBIB}"
         remBib "$@";;
