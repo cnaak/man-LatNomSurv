@@ -104,7 +104,9 @@ function listBib() {
     if [ "$#" -lt 1 ]; then
         _listBib;
     else
-        _listBib | grep "$1";
+        p="$1"
+        shift
+        _listBib | grep "$p";
     fi
 }
 
