@@ -208,7 +208,7 @@ case "${COMM}" in
         preChange
         remBib "$@";;
     "RESET")
-        cp "${THEBIB}" "${BKPBIB}"
+        preChange
         cp /dev/null "${THEBIB}";;
     "SORT")
         cp "${THEBIB}" "${BKPBIB}"
