@@ -69,15 +69,12 @@ function letItBib() {
 }
 
 function _listBib() {
-    if hasBib; then
-        uline "Key list for file '${THEBIB}':"
-        grep '^@' "${THEBIB}" |\
-            grep -v '^@Comment' |\
-            sort -n |\
-            sed 's|^|\t|g';
-    else
-        exit -1;
-    fi;
+    letItBib
+    uline "Key list for file '${THEBIB}':"
+    grep '^@' "${THEBIB}" |\
+        grep -v '^@Comment' |\
+        sort -n |\
+        sed 's|^|\t|g';
 }
 
 function _lstBib() {
@@ -156,6 +153,21 @@ function remBib() {
     addBib "${DIFKEY}"
 }
 
+function sortBib() {
+    if hasBib; then
+        echo -e "INFO: Sorting '${THEBIB}'";
+        remBib "$(md5sum ${THEBIB} | cut -f1 -d' ')"
+    elif hasBkp; then
+        echo -e "INFO: Restored missing '${THEBIB}' from '${BKPBIB}'"
+        cp "${BKPBIB}" "${THEBIB}";
+        echo -e "INFO: Sorting '${THEBIB}'";
+        remBib "$(md5sum ${THEBIB} | cut -f1 -d' ')"
+    else
+        echo -e "INFO: Created empty '${THEBIB}'"
+        touch "${THEBIB}";
+    fi;
+}
+
 # MAIN - Parse commands
 COMM="${1}"
 shift
@@ -177,6 +189,9 @@ case "${COMM}" in
     "RESET")
         cp "${THEBIB}" "${BKPBIB}"
         cp /dev/null "${THEBIB}";;
+    "SORT")
+        cp "${THEBIB}" "${BKPBIB}"
+        sortBib "$@";;
     *)
         echo -e "ERROR: invalid command: '${1}'.\n"
         help -1;;
