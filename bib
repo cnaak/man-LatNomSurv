@@ -59,14 +59,6 @@ function hasBkp() { test -f "${BKPBIB}"; }
 function hasBoth() { hasBib && hasBkp; }
 
 function preQuery() {
-    # Implement me
-}
-
-function preChange() {
-    # Implement me
-}
-
-function letItBib() {
     if hasBib; then
         echo -e "INFO: Existing '${THEBIB}'";
     elif hasBkp; then
@@ -76,6 +68,13 @@ function letItBib() {
         echo -e "INFO: Created empty '${THEBIB}'"
         touch "${THEBIB}";
     fi;
+}
+
+function preChange() {
+    # Implement me
+}
+
+function letItBib() {
 }
 
 function _listBib() {
@@ -179,19 +178,31 @@ function bibBkp() {
 COMM="${1}"
 shift
 case "${COMM}" in
+    #----------------------------------------------------------------------#
+    #                              No-DB opts                              #
+    #----------------------------------------------------------------------#
     "help" | "HELP")
         help 0;;
+    #----------------------------------------------------------------------#
+    #                           Remote DBs opts                            #
+    #----------------------------------------------------------------------#
+    "BASE")
+        dbase;;
+    #----------------------------------------------------------------------#
+    #                              Query opts                              #
+    #----------------------------------------------------------------------#
     "LIST")
         listBib "$@";;
     "LST")
         lstBib "$@";;
-    "BACKUP")
-        bibBkp;;
-    "BASE")
-        dbase;;
+    #----------------------------------------------------------------------#
+    #                            Local DB opts                             #
+    #----------------------------------------------------------------------#
     "ADD")
         cp "${THEBIB}" "${BKPBIB}"
         addBib "$@";;
+    "BACKUP")
+        bibBkp;;
     "REM")
         cp "${THEBIB}" "${BKPBIB}"
         remBib "$@";;
@@ -201,6 +212,9 @@ case "${COMM}" in
     "SORT")
         cp "${THEBIB}" "${BKPBIB}"
         sortBib "$@";;
+    #----------------------------------------------------------------------#
+    #                               Invalid                                #
+    #----------------------------------------------------------------------#
     *)
         echo -e "ERROR: invalid command: '${1}'.\n"
         help -1;;
