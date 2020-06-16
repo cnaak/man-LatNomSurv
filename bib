@@ -152,18 +152,8 @@ function remBib() {
 }
 
 function sortBib() {
-    if hasBib; then
-        echo -e "INFO: Sorting '${THEBIB}'";
-        remBib "$(md5sum ${THEBIB} | cut -f1 -d' ')"
-    elif hasBkp; then
-        echo -e "INFO: Restored missing '${THEBIB}' from '${BKPBIB}'"
-        cp "${BKPBIB}" "${THEBIB}";
-        echo -e "INFO: Sorting '${THEBIB}'";
-        remBib "$(md5sum ${THEBIB} | cut -f1 -d' ')"
-    else
-        echo -e "INFO: Created empty '${THEBIB}'"
-        touch "${THEBIB}";
-    fi;
+    echo -e "INFO: Sorting '${THEBIB}'";
+    remBib "$(md5sum ${THEBIB} | cut -f1 -d' ')"    # This will letItBib
 }
 
 # MAIN - Parse commands
