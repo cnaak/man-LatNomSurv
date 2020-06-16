@@ -63,15 +63,25 @@ function preQuery() {
         echo -e "INFO: Existing '${THEBIB}'";
     elif hasBkp; then
         echo -e "INFO: Restored missing '${THEBIB}' from '${BKPBIB}'"
-        cp "${BKPBIB}" "${THEBIB}";
+        cp -f "${BKPBIB}" "${THEBIB}";
     else
         echo -e "INFO: Created empty '${THEBIB}'"
-        touch "${THEBIB}";
+        cp -f /dev/null "${THEBIB}";
     fi;
 }
 
 function preChange() {
-    # Implement me
+    if hasBib; then
+        echo -e "INFO: Backing up existing '${THEBIB}' into '${BKPBIB}'";
+        cp -f "${THEBIB}" "${BKPBIB}"
+    elif hasBkp; then
+        echo -e "INFO: Restored missing '${THEBIB}' from '${BKPBIB}'"
+        cp -f "${BKPBIB}" "${THEBIB}";
+    else
+        echo -e "INFO: Missing '${THEBIB}' and '${BKPBIB}'. Created empty ones."
+        cp -f /dev/null "${THEBIB}";
+        cp -f /dev/null "${BKPBIB}";
+    fi;
 }
 
 function _listBib() {
@@ -102,7 +112,9 @@ function lstBib() {
     if [ "$#" -lt 1 ]; then
         _lstBib;
     else
-        _lstBib | grep "$1";
+        p="$1"
+        shift
+        lstBib "$@" | grep "$p";
     fi
 }
 
@@ -195,9 +207,10 @@ case "${COMM}" in
     #                            Local DB opts                             #
     #----------------------------------------------------------------------#
     "ADD")
-        cp "${THEBIB}" "${BKPBIB}"
+        preChange
         addBib "$@";;
     "BACKUP")
+        preChange
         bibBkp;;
     "REM")
         cp "${THEBIB}" "${BKPBIB}"
