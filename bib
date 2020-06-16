@@ -169,7 +169,7 @@ function remBib() {
 }
 
 function sortBib() {
-    echo -e "INFO: Sorting '${THEBIB}'";
+    echo -e "INFO: Sorting '${THEBIB}'"
     remBib "$(md5sum ${THEBIB} | cut -f1 -d' ')"
 }
 
