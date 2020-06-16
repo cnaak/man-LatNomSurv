@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for y in $(years); do
+    echo $y | center | frame
+    bib LST $y 2>/dev/null
+done
+
