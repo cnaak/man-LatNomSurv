@@ -106,7 +106,7 @@ function listBib() {
     else
         p="$1"
         shift
-        _listBib | grep "$p";
+        listBib | grep "$p";
     fi
 }
 
