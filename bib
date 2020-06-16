@@ -176,7 +176,7 @@ function sortBib() {
 function bibBkp() {
     if hasBib; then
         echo -e "INFO: Backing up '${THEBIB}' into '${BKPBIB}'"
-        cp -f "${THEBIB}" "${BKPBIB}";;
+        cp -f "${THEBIB}" "${BKPBIB}"
     else
         echo -e "INFO: Nothing to backup"
     fi
