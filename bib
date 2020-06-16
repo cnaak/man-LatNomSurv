@@ -139,8 +139,8 @@ function keysOf() {
 
 function addBib() {
     if [ "$#" -lt 1 ]; then
-        echo -e "ERROR: Missing arguments to ADD.\n"
-        help -1;
+        echo -e "ERROR: Missing arguments to ADD.\n" 1>&2
+        help -1
     fi
     for BIBPAT in "$@"; do
         for BIBSRC in $(dbfiles | sed "s|\.bib$||g" | grep "${BIBPAT}"); do
@@ -205,7 +205,7 @@ case "${COMM}" in
     "BACKUP")
         preChange;;
     "REM")
-        cp "${THEBIB}" "${BKPBIB}"
+        preChange
         remBib "$@";;
     "RESET")
         cp "${THEBIB}" "${BKPBIB}"
