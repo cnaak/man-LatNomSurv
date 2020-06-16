@@ -60,13 +60,13 @@ function hasBoth() { hasBib && hasBkp; }
 
 function preQuery() {
     if hasBib; then
-        echo -e "INFO: Existing '${THEBIB}'"
+        echo -e "INFO: Existing '${THEBIB}'" 1>&2
     elif hasBkp; then
-        echo -e "INFO: Restored missing '${THEBIB}' from '${BKPBIB}'"
-        cp -f "${BKPBIB}" "${THEBIB}"
+        echo -e "INFO: Restored missing '${THEBIB}' from '${BKPBIB}'" 1>&2
+        cp -f "${BKPBIB}" "${THEBIB}" 1>&2
     else
-        echo -e "INFO: Created empty '${THEBIB}'"
-        cp -f /dev/null "${THEBIB}"
+        echo -e "INFO: Created empty '${THEBIB}'" 1>&2
+        cp -f /dev/null "${THEBIB}" 1>&2
     fi;
 }
 
