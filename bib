@@ -152,7 +152,7 @@ function addBib() {
     fi
     for BIBPAT in "$@"; do
         for BIBSRC in $(dbfiles | sed "s|\.bib$||g" | grep "${BIBPAT}"); do
-            if grep -q "$(keysOf ${BIBSRC})" "${THEBIB}"; then
+            if grep -q "$(keysOf ${BIBSRC} | sed 's|$|,|g')" "${THEBIB}"; then
                 for BIBKEY in $(keysOf ${BIBSRC}); do
                     echo -e "INFO: x '${BIBKEY}' (from ${BIBSRC})."
                 done
