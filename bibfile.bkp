@@ -60,8 +60,8 @@
 
 @Article{1990-BenziR+VergassolaM-EuroPhysLett,
   author    = {Benzi, R. and Succi, S. and Vergassola, M.},
-  title     = {Turbulence Modelling by Nonhydrodynamic Variables},
-  journal = {Europhys. Lett.},
+  title     = {Turbulence modelling by nonhydrodynamic variables},
+  journal   = {Europhys. Lett.},
   year      = {1990},
   volume    = {13},
   number    = {8},
@@ -494,10 +494,11 @@
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2001-dHumieresD+LallemandP-PhysRevE,
-  author    = {d'Humi\`eres, Dominique and Bouzidi, M'hamed and Lallemand, Pierre},
-  title     = {Thirteen-velocity three-dimensional lattice Boltzmann model},
+  author    = {d'Humières, Dominique and Bouzidi, M'hamed and Lallemand, Pierre},
+  title     = {Thirteen-velocity three-dimensional lattice {B}oltzmann model},
   journal   = {Phys. Rev. E},
   year      = {2001},
   volume    = {63},
@@ -510,6 +511,7 @@
   url       = {http://journals.aps.org/pre/abstract/10.1103/PhysRevE.63.066702},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
 % Encoding: UTF-8
 
@@ -576,10 +578,11 @@ computational efficiency of the standard lattice Boltzmann model.},
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2003-WatariM+TsutaharaM-PhysRevE,
   author    = {Watari, Minoru and Tsutahara, Michihisa},
-  title     = {Two-dimensional thermal model of the finite-difference lattice Boltzmann method with high spatial isotropy},
+  title     = {Two-dimensional thermal model of the finite-difference lattice {B}oltzmann method with high spatial isotropy},
   journal   = {Phys. Rev. E},
   year      = {2003},
   volume    = {67},
@@ -592,6 +595,7 @@ computational efficiency of the standard lattice Boltzmann model.},
   url       = {https://link.aps.org/doi/10.1103/PhysRevE.67.036306},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
 
 @Article{2005-LuXY-IntJModPhysC,
@@ -610,11 +614,12 @@ computational efficiency of the standard lattice Boltzmann model.},
 }
 
 
+% Encoding: UTF-8
 
 @Article{2006-ChikatamarlaSS+KarlinIV-PhysRevLett,
-  author    = {Chikatamarla, Shyam S. and Karlin, Iliya V},
-  title     = {Entropy and Galilean Invariance of Lattice Boltzmann Theories},
-  journal = {Phys. Rev. Lett.},
+  author    = {Chikatamarla, Shyam S. and Karlin, Iliya V.},
+  title     = {Entropy and galilean invariance of lattice {B}oltzmann theories},
+  journal   = {Phys. Rev. Lett.},
   year      = {2006},
   volume    = {97},
   pages     = {190601},
@@ -625,25 +630,31 @@ computational efficiency of the standard lattice Boltzmann model.},
   url       = {https://link.aps.org/doi/10.1103/PhysRevLett.97.190601},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
-@article{2006-ChikatamarlaSS+KarlinIV-PhysRevLett-ELBM3D,
-  title = {Entropic Lattice Boltzmann Models for Hydrodynamics in Three Dimensions},
-  author = {Chikatamarla, S. S. and Ansumali, S. and Karlin, I. V.},
-  journal = {Phys. Rev. Lett.},
-  volume = {97},
-  issue = {1},
-  pages = {010201},
-  year = {2006},
-  month = {Jul},
+% Encoding: UTF-8
+
+@Article{2006-ChikatamarlaSS+KarlinIV-PhysRevLett-ELBM3D,
+  author    = {Chikatamarla, S. S. and Ansumali, S. and Karlin, I. V.},
+  title     = {Entropic lattice {B}oltzmann models for hydrodynamics in three dimensions},
+  journal   = {Phys. Rev. Lett.},
+  year      = {2006},
+  volume    = {97},
+  pages     = {010201},
+  month     = {Jul},
+  doi       = {10.1103/PhysRevLett.97.010201},
+  issue     = {1},
   publisher = {American Physical Society},
-  doi = {10.1103/PhysRevLett.97.010201},
-  url = {https://link.aps.org/doi/10.1103/PhysRevLett.97.010201}
+  url       = {https://link.aps.org/doi/10.1103/PhysRevLett.97.010201},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
+
+% Encoding: UTF-8
 
 @Article{2006-PhilippiPC+SurmasR-PhysRevE,
-  author    = {Philippi, Paulo C. and Hegele, Luiz A. and dos Santos, Lu\'{\i}s O. E. and Surmas, Rodrigo},
-  title     = {From the continuous to the lattice Boltzmann equation: The discretization problem and thermal models},
+  author    = {Philippi, Paulo C. and Hegele, Luiz A. and dos Santos, Luís O. E. and Surmas, Rodrigo},
+  title     = {From the continuous to the lattice {B}oltzmann equation: the discretization problem and thermal models},
   journal   = {Phys. Rev. E},
   year      = {2006},
   volume    = {73},
@@ -656,6 +667,7 @@ computational efficiency of the standard lattice Boltzmann model.},
   url       = {http://link.aps.org/doi/10.1103/PhysRevE.73.056702},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
 % Encoding: UTF-8
 
@@ -674,11 +686,12 @@ computational efficiency of the standard lattice Boltzmann model.},
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2006-WatariM+TsutaharaM-PhysA,
   author    = {Watari, Minoru and Tsutahara, Michihisa},
-  title     = {Supersonic flow simulations by a three-dimensional multispeed thermal model of the finite difference lattice Boltzmann method},
-  journal = {Physica A},
+  title     = {Supersonic flow simulations by a three-dimensional multispeed thermal model of the finite difference lattice {B}oltzmann method},
+  journal   = {Physica A},
   year      = {2006},
   volume    = {364},
   pages     = {129--144},
@@ -690,6 +703,7 @@ computational efficiency of the standard lattice Boltzmann model.},
   url       = {https://doi.org/10.1016/j.physa.2005.06.103},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
 % Encoding: UTF-8
 
@@ -707,21 +721,23 @@ computational efficiency of the standard lattice Boltzmann model.},
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2007-PhilippiPC+DosSantosLOE-IntJModPhysC,
-  author    = {Philippi, Paulo Cesar and Hegele, Luiz Adolfo Jr and Surmas, Rodrigo and Siebert, Diogo Nardelli and Dos Santos, Lu\'is Orlando Emerich},
-  title     = {From the Boltzmann to the lattice-Boltzmann equation: beyond BGK collision models},
-  journal = {Int. J. Mod. Phys. C},
-  year      = {2007},
-  volume    = {18},
-  pages     = {556--565},
-  month     = {April},
-  abstract  = {In this work, we present a derivation for the lattice-Boltzmann equation directly from the linearized Boltzmann equation, combining the following main features: multiple relaxation times and thermodynamic consistency in the description of non isothermal compressible flows. The method presented here is based on the discretization of increasingly orde kinetic models of the Boltzmann equation. Following a Gross-Jackson procedure, the linearized collision term is developed in Hermite polynomial tensors and the resulting infinite series is diagonalized after a chosen integer N, establishing the order of approximation of the collision term. The velocity space is discretized, in accordance with a quadrature method based on prescribed abscissas (Philippi et al., Phys. Rev E 73, 056702, 2006). The problem of describing the energy transfer is discussed, in relation with the order of approximation of a two relaxation-times lattice Boltzmann model. The velocity-step, temperature-step and the shock tube problems are investigated, adopting lattices with 37, 53 and 81 velocities.},
-  doi       = {10.1142/S0129183107010796},
-  keywords  = {Lattice Boltzmann equation, thermal models, multiple relaxation times.},
-  url       = {https://doi.org/10.1142/S0129183107010796},
+  author   = {Philippi, Paulo Cesar and Hegele, Luiz Adolfo Jr and Surmas, Rodrigo and Siebert, Diogo Nardelli and Dos Santos, Luís Orlando Emerich},
+  title    = {From the {B}oltzmann to the lattice-{B}oltzmann equation: beyond {BGK} collision models},
+  journal  = {Int. J. Mod. Phys. C},
+  year     = {2007},
+  volume   = {18},
+  pages    = {556--565},
+  month    = {April},
+  abstract = {In this work, we present a derivation for the lattice-Boltzmann equation directly from the linearized Boltzmann equation, combining the following main features: multiple relaxation times and thermodynamic consistency in the description of non isothermal compressible flows. The method presented here is based on the discretization of increasingly orde kinetic models of the Boltzmann equation. Following a Gross-Jackson procedure, the linearized collision term is developed in Hermite polynomial tensors and the resulting infinite series is diagonalized after a chosen integer N, establishing the order of approximation of the collision term. The velocity space is discretized, in accordance with a quadrature method based on prescribed abscissas (Philippi et al., Phys. Rev E 73, 056702, 2006). The problem of describing the energy transfer is discussed, in relation with the order of approximation of a two relaxation-times lattice Boltzmann model. The velocity-step, temperature-step and the shock tube problems are investigated, adopting lattices with 37, 53 and 81 velocities.},
+  doi      = {10.1142/S0129183107010796},
+  keywords = {Lattice Boltzmann equation, thermal models, multiple relaxation times.},
+  url      = {https://doi.org/10.1142/S0129183107010796},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
 
 @Article{2007-SiebertDN+PhilippiPC-IntJModPhysC,
@@ -740,11 +756,12 @@ computational efficiency of the standard lattice Boltzmann model.},
 }
 
 
+% Encoding: UTF-8
 
 @Article{2007-WatariM-PhysA,
   author    = {Watari, Minoru},
-  title     = {Finite difference lattice Boltzmann method with arbitrary specific heat ratio applicable to supersonic flow simulations},
-  journal = {Physica A},
+  title     = {Finite difference lattice {B}oltzmann method with arbitrary specific heat ratio applicable to supersonic flow simulations},
+  journal   = {Physica A},
   year      = {2007},
   volume    = {382},
   pages     = {502--522},
@@ -756,12 +773,14 @@ computational efficiency of the standard lattice Boltzmann model.},
   url       = {https://doi.org/10.1016/j.physa.2007.03.037},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2008-ChenH+ShanX-PhysD,
   author    = {Chen, Hudong and Shan, Xiaowen},
-  title     = {Fundamental conditions for N-th-order accurate lattice Boltzmann models},
-  journal = {Physica D},
+  title     = {Fundamental conditions for {N-th}-order accurate lattice {B}oltzmann models},
+  journal   = {Physica D},
   year      = {2008},
   volume    = {237},
   pages     = {2003--2008},
@@ -774,6 +793,7 @@ computational efficiency of the standard lattice Boltzmann model.},
   url       = {https://doi.org/10.1016/j.physd.2007.11.010},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
 % Encoding: UTF-8
 
@@ -795,11 +815,12 @@ computational efficiency of the standard lattice Boltzmann model.},
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2008-KimSH+BoydID-JComputPhys,
   author    = {Kim, Seung Hyun and Pitsch, Heinz and Boyd, Iain D.},
-  title     = {Accuracy of higher-order lattice Boltzmann methods for microscale flows with finite Knudsen numbers},
-  journal = {J. Comp. Phys.},
+  title     = {Accuracy of higher-order lattice {B}oltzmann methods for microscale flows with finite {K}nudsen numbers},
+  journal   = {J. Comp. Phys.},
   year      = {2008},
   volume    = {227},
   pages     = {8655–-8671},
@@ -811,25 +832,31 @@ computational efficiency of the standard lattice Boltzmann model.},
   url       = {https://doi.org/10.1016/j.jcp.2008.06.012},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
-@article{2008-NieX+ChenH-PhysRevE,
-  title = {Thermal lattice Boltzmann model for gases with internal degrees of freedom},
-  author = {Nie, Xiaobo and Shan, Xiaowen and Chen, Hudong},
-  journal = {Phys. Rev. E},
-  volume = {77},
-  issue = {3},
-  pages = {035701},
-  year = {2008},
-  month = {Mar},
+% Encoding: UTF-8
+
+@Article{2008-NieX+ChenH-PhysRevE,
+  author    = {Nie, Xiaobo and Shan, Xiaowen and Chen, Hudong},
+  title     = {Thermal lattice {B}oltzmann model for gases with internal degrees of freedom},
+  journal   = {Phys. Rev. E},
+  year      = {2008},
+  volume    = {77},
+  pages     = {035701},
+  month     = {Mar},
+  doi       = {10.1103/PhysRevE.77.035701},
+  issue     = {3},
   publisher = {American Physical Society},
-  doi = {10.1103/PhysRevE.77.035701},
-  url = {https://link.aps.org/doi/10.1103/PhysRevE.77.035701}
+  url       = {https://link.aps.org/doi/10.1103/PhysRevE.77.035701},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
+
+% Encoding: UTF-8
 
 @Article{2008-RubinsteinR+LuoLS-PhysRev,
   author    = {Rubinstein, Robert and Luo, Li-Shi},
-  title     = {Theory of the lattice Boltzmann equation: symmetry properties of discrete velocity sets},
+  title     = {Theory of the lattice {B}oltzmann equation: symmetry properties of discrete velocity sets},
   journal   = {Phys. Rev. E},
   year      = {2008},
   volume    = {77},
@@ -842,6 +869,7 @@ computational efficiency of the standard lattice Boltzmann model.},
   url       = {https://link.aps.org/doi/10.1103/PhysRevE.77.036709},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
 
 @Patent{2008-ShanX+ZhangR-USPat,
@@ -862,10 +890,11 @@ computational efficiency of the standard lattice Boltzmann model.},
 }
 
 
+% Encoding: UTF-8
 
 @Article{2009-ChikatamarlaSS+KarlinIV-PhysRevE,
   author    = {Chikatamarla, Shyam S. and Karlin, Iliya V.},
-  title     = {Lattices for the lattice Boltzmann method},
+  title     = {Lattices for the lattice {B}oltzmann method},
   journal   = {Phys. Rev. E},
   year      = {2009},
   volume    = {79},
@@ -878,26 +907,30 @@ computational efficiency of the standard lattice Boltzmann model.},
   url       = {https://link.aps.org/doi/10.1103/PhysRevE.79.046701},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2009-SurmasR+PhilippiPC-EurPhysJSpecialTopics,
-  author    = {Surmas, R. and Pico, Ortiz C. and Philippi, P. C.},
-  title     = {Simulating thermohydrodynamics by finite difference solutions of the Boltzmann equation},
+  author  = {Surmas, R. and Pico, Ortiz C. and Philippi, P. C.},
+  title   = {Simulating thermohydrodynamics by finite difference solutions of the {B}oltzmann equation},
   journal = {Euro. Phys J. Spec. Top.},
-  year      = {2009},
-  volume    = {171},
-  pages     = {81-90},
-  month     = {Apr},
-  doi       = {10.1140/epjst/e2009-01014-x},
-  url       = {https://doi.org/10.1140/epjst/e2009-01014-x},
+  year    = {2009},
+  volume  = {171},
+  pages   = {81-90},
+  month   = {Apr},
+  doi     = {10.1140/epjst/e2009-01014-x},
+  url     = {https://doi.org/10.1140/epjst/e2009-01014-x},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2010-AidunCK+ClausenJR-AnnuRevFluidMech,
   author    = {Aidun, Cyrus K. and Clausen, Jonathan R.},
-  title     = {Lattice-Boltzmann Method for Complex Flows},
-  journal = {Ann. Rev. Fluid Mech.},
+  title     = {Lattice-{B}oltzmann method for complex flows},
+  journal   = {Ann. Rev. Fluid Mech.},
   year      = {2010},
   volume    = {42},
   pages     = {439--472},
@@ -908,14 +941,17 @@ computational efficiency of the standard lattice Boltzmann model.},
   url       = {https://doi-org.ez48.periodicos.capes.gov.br/10.1146/annurev-fluid-121108-145519},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Electronic{2010-AidunCK+ClausenJR-AnnuRevFluidMech-supl,
   author       = {Aidun, Cyrus K. and Clausen, Jonathan R.},
-  title        = {Supplementary Material: Lattice-Boltzmann Method for Complex Flows},
+  title        = {Supplementary material: {L}attice-{B}oltzmann method for complex flows},
   organization = {G. W. Woodru School of Mechanical Engineering, Georgia Institute of Technology, Atlanta, Georgia 30302},
 }
 
+@Comment{jabref-meta: databaseType:biblatex;}
 
 % Encoding: UTF-8
 
@@ -932,19 +968,23 @@ computational efficiency of the standard lattice Boltzmann model.},
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
-@article{2010-ShanX-PhysRevE,
-  title = {General solution of lattices for Cartesian lattice Bhatanagar-Gross-Krook models},
-  author = {Shan, Xiaowen},
-  journal = {Phys. Rev. E},
-  volume = {81},
-  issue = {3},
-  pages = {036702},
-  year = {2010},
-  month = {Mar},
+% Encoding: UTF-8
+
+@Article{2010-ShanX-PhysRevE,
+  author    = {Shan, Xiaowen},
+  title     = {General solution of lattices for {C}artesian lattice {B}hatanagar-{G}ross-{K}rook models},
+  journal   = {Phys. Rev. E},
+  year      = {2010},
+  volume    = {81},
+  pages     = {036702},
+  month     = {Mar},
+  doi       = {10.1103/PhysRevE.81.036702},
+  issue     = {3},
   publisher = {American Physical Society},
-  doi = {10.1103/PhysRevE.81.036702},
-  url = {https://link.aps.org/doi/10.1103/PhysRevE.81.036702}
+  url       = {https://link.aps.org/doi/10.1103/PhysRevE.81.036702},
 }
+
+@Comment{jabref-meta: databaseType:bibtex;}
 
 % Encoding: UTF-8
 
@@ -975,10 +1015,11 @@ computational efficiency of the standard lattice Boltzmann model.},
 }
 
 
+% Encoding: UTF-8
 
 @Article{2012-AmbrusVE+SofoneaV-PhysRevE,
   author    = {Ambrus, Victor Eugen and Sofonea, Victor},
-  title     = {High-order thermal lattice Boltzmann models derived by means of Gauss quadrature in the spherical coordinate system},
+  title     = {High-order thermal lattice {B}oltzmann models derived by means of {G}auss quadrature in the spherical coordinate system},
   journal   = {Phys. Rev. E},
   year      = {2012},
   volume    = {86},
@@ -991,21 +1032,24 @@ computational efficiency of the standard lattice Boltzmann model.},
   url       = {https://link.aps.org/doi/10.1103/PhysRevE.86.016708},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2013-HegeleJr+PhilippiPC-JSciComput,
-  author    = {Hegele, Jr., Luiz Adolfo and Keijo Kalervo Mattila and Paulo Cesar Philippi},
-  title     = {Rectangular Lattice-Boltzmann Schemes with BGK-Collision Operator},
-  journal   = {J. Sci. Comput.},
-  year      = {2013},
-  volume    = {56},
-  pages     = {230--242},
-  month     = {December},
-  abstract  = {The usual lattice-Boltzmann schemes for fluid flow simulations operate with square and cubic lattices. Instead of relying on square lattices it is possible to use rectangular and orthorombic lattices as well. Schemes using rectangular lattices can be constructed in several ways. Here we construct a rectangular scheme, with the BGK collision operator, by introducing 2 additional discrete velocities into the standard D2Q9 stencil and show how the same procedure can be applied in three dimensions by extending the D3Q19 stencil. The weights and scaling factors for the new stencils are found as the solutions of the well-known Hermite quadrature problem, assuring isotropy of the lattice tensors up to rank four (Philippi et al., Phys. Rev. E 73(5):056702, 2006) This isotropy is a necessary and sufficient condition for assuring the same second order accuracy of lattice-Boltzmann equation with respect to the Navier–Stokes hydrodynamic equations that is found with the standard D2Q9 and D3Q19 stencils. The numerical validation is done, in the two-dimensional case, by using the new rectangular scheme with D2R11 stencil for simulating the Taylor–Green vortex decay. The D3R23 stencil is numerically validated with three-dimensional simulations of cylindrical sound waves propagating from a point source.},
-  doi       = {10.1007/s10915-012-9672-x},
-  url       = {http://link.springer.com/article/10.1007/s10915-012-9672-x},
+  author   = {Hegele, Jr., Luiz Adolfo and Mattila, Keijo Kalervo and Philippi, Paulo Cesar},
+  title    = {Rectangular lattice-{B}oltzmann schemes with {BGK}-collision operator},
+  journal  = {J. Sci. Comput.},
+  year     = {2013},
+  volume   = {56},
+  pages    = {230--242},
+  month    = {December},
+  abstract = {The usual lattice-Boltzmann schemes for fluid flow simulations operate with square and cubic lattices. Instead of relying on square lattices it is possible to use rectangular and orthorombic lattices as well. Schemes using rectangular lattices can be constructed in several ways. Here we construct a rectangular scheme, with the BGK collision operator, by introducing 2 additional discrete velocities into the standard D2Q9 stencil and show how the same procedure can be applied in three dimensions by extending the D3Q19 stencil. The weights and scaling factors for the new stencils are found as the solutions of the well-known Hermite quadrature problem, assuring isotropy of the lattice tensors up to rank four (Philippi et al., Phys. Rev. E 73(5):056702, 2006) This isotropy is a necessary and sufficient condition for assuring the same second order accuracy of lattice-Boltzmann equation with respect to the Navier–Stokes hydrodynamic equations that is found with the standard D2Q9 and D3Q19 stencils. The numerical validation is done, in the two-dimensional case, by using the new rectangular scheme with D2R11 stencil for simulating the Taylor–Green vortex decay. The D3R23 stencil is numerically validated with three-dimensional simulations of cylindrical sound waves propagating from a point source.},
+  doi      = {10.1007/s10915-012-9672-x},
+  url      = {http://link.springer.com/article/10.1007/s10915-012-9672-x},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
 
 @Article{2013-MattilaKK+PhilippiPC-IntJModPhysC,
@@ -1025,17 +1069,18 @@ computational efficiency of the standard lattice Boltzmann model.},
 }
 
 
+% Encoding: UTF-8
 
 @Article{2014-MattilaKK+PhilippiPC-SciWorldJ,
-  author    = {Keijo Kalervo Mattila and Hegele, Jr., Luiz Adolfo and Paulo Cesar Philippi},
-  title     = {High-Accuracy Approximation of High-Rank Derivatives: Isotropic Finite Differences Based on Lattice-Boltzmann Stencils},
-  journal = {Sci. World J.},
-  year      = {2014},
-  volume    = {2014},
-  pages     = {1--16},
-  month     = {January},
-  note      = {Article ID 142907},
-  abstract  = {We propose isotropic finite differences for high-accuracy approximation of high-rank derivatives. These finite differences are
+  author   = {Mattila, Keijo Kalervo and Hegele, Jr., Luiz Adolfo and Philippi, Paulo Cesar},
+  title    = {High-accuracy approximation of high-rank derivatives: isotropic finite differences based on lattice-{B}oltzmann stencils},
+  journal  = {Sci. World J.},
+  year     = {2014},
+  volume   = {2014},
+  pages    = {1--16},
+  month    = {January},
+  note     = {Article ID 142907},
+  abstract = {We propose isotropic finite differences for high-accuracy approximation of high-rank derivatives. These finite differences are
 based on direct application of lattice-Boltzmann stencils. The presented finite-difference expressions are valid in any dimension,
 particularly in two and three dimensions, and any lattice-Boltzmann stencil isotropic enough can be utilized. A theoretical basis
 for the proposed utilization of lattice-Boltzmann stencils in the approximation of high-rank derivatives is established. In particular,
@@ -1044,16 +1089,18 @@ formal development, we extend the theory of Hermite polynomial tensors in the ca
 the discrete inner products between monomials and Hermite polynomial tensors. In addition, we prove an equivalency between
 two approaches for constructing lattice-Boltzmann stencils. For the numerical verification of the presented finite differences, we
 introduce 5th-, 6th-, and 8th-order two-dimensional lattice-Boltzmann stencils.},
-  doi       = {10.1155/2014/142907},
-  url       = {http://dx.doi.org/10.1155/2014/142907},
+  doi      = {10.1155/2014/142907},
+  url      = {http://dx.doi.org/10.1155/2014/142907},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2014-MengJ+ZhangY-JComputPhys,
   author    = {Meng, Jianping and Zhang, Yonghao},
-  title     = {Diffuse reflection boundary condition for high-order lattice Boltzmann models with streaming–collision mechanism},
-  journal = {J. Comp. Phys.},
+  title     = {Diffuse reflection boundary condition for high-order lattice {B}oltzmann models with streaming–collision mechanism},
+  journal   = {J. Comp. Phys.},
   year      = {2014},
   volume    = {258},
   pages     = {601--612},
@@ -1065,11 +1112,13 @@ introduce 5th-, 6th-, and 8th-order two-dimensional lattice-Boltzmann stencils.}
   url       = {https://doi.org/10.1016/j.jcp.2013.10.057},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2014-SiebertDN+MattilaKK-PhysRevE,
   author    = {Siebert, D. N. and Philippi, P. C. and Mattila, K. K.},
-  title     = {Consistent lattice Boltzmann equations for phase transitions},
+  title     = {Consistent lattice {B}oltzmann equations for phase transitions},
   journal   = {Phys. Rev. E},
   year      = {2014},
   volume    = {90},
@@ -1082,11 +1131,13 @@ introduce 5th-, 6th-, and 8th-order two-dimensional lattice-Boltzmann stencils.}
   url       = {https://link.aps.org/doi/10.1103/PhysRevE.90.053310},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2015-FrapolliN+KarlinIV-PhysRevE,
   author    = {Frapolli, N. and Chikatamarla, S. S. and Karlin, I. V.},
-  title     = {Entropic lattice Boltzmann model for compressible flows},
+  title     = {Entropic lattice {B}oltzmann model for compressible flows},
   journal   = {Phys. Rev. E},
   year      = {2015},
   volume    = {92},
@@ -1099,49 +1150,61 @@ introduce 5th-, 6th-, and 8th-order two-dimensional lattice-Boltzmann stencils.}
   url       = {https://link.aps.org/doi/10.1103/PhysRevE.92.061301},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
-@article{2016-FrapolliN+KarlinIV-PhysRevE,
-  title = {Entropic lattice Boltzmann model for gas dynamics: Theory, boundary conditions, and implementation},
-  author = {Frapolli, N. and Chikatamarla, S. S. and Karlin, I. V.},
-  journal = {Phys. Rev. E},
-  volume = {93},
-  issue = {6},
-  pages = {063302},
-  year = {2016},
-  month = {Jun},
+% Encoding: UTF-8
+
+@Article{2016-FrapolliN+KarlinIV-PhysRevE,
+  author    = {Frapolli, N. and Chikatamarla, S. S. and Karlin, I. V.},
+  title     = {Entropic lattice {B}oltzmann model for gas dynamics: theory, boundary conditions, and implementation},
+  journal   = {Phys. Rev. E},
+  year      = {2016},
+  volume    = {93},
+  pages     = {063302},
+  month     = {Jun},
+  doi       = {10.1103/PhysRevE.93.063302},
+  issue     = {6},
   publisher = {American Physical Society},
-  doi = {10.1103/PhysRevE.93.063302},
-  url = {https://link.aps.org/doi/10.1103/PhysRevE.93.063302}
+  url       = {https://link.aps.org/doi/10.1103/PhysRevE.93.063302},
 }
 
-@article{2016-FrapolliN+KarlinIV-PhysRevLett,
-  title = {Lattice Kinetic Theory in a Comoving Galilean Reference Frame},
-  author = {Frapolli, N. and Chikatamarla, S. S. and Karlin, I. V.},
-  journal = {Phys. Rev. Lett.},
-  volume = {117},
-  issue = {1},
-  pages = {010604},
-  year = {2016},
-  month = {Jun},
+@Comment{jabref-meta: databaseType:bibtex;}
+
+% Encoding: UTF-8
+
+@Article{2016-FrapolliN+KarlinIV-PhysRevLett,
+  author    = {Frapolli, N. and Chikatamarla, S. S. and Karlin, I. V.},
+  title     = {Lattice kinetic theory in a comoving {G}alilean reference frame},
+  journal   = {Phys. Rev. Lett.},
+  year      = {2016},
+  volume    = {117},
+  pages     = {010604},
+  month     = {Jun},
+  doi       = {10.1103/PhysRevLett.117.010604},
+  issue     = {1},
   publisher = {American Physical Society},
-  doi = {10.1103/PhysRevLett.117.010604},
-  url = {https://link.aps.org/doi/10.1103/PhysRevLett.117.010604}
+  url       = {https://link.aps.org/doi/10.1103/PhysRevLett.117.010604},
 }
 
-@article{2016-NamburiM+AnsumaliS-SciRep,
-	abstract = {Current approaches to Direct Numerical Simulation (DNS) are computationally quite expensive for most realistic scientific and engineering applications of Fluid Dynamics such as automobiles or atmospheric flows. The Lattice Boltzmann Method (LBM), with its simplified kinetic descriptions, has emerged as an important tool for simulating hydrodynamics. In a heterogeneous computing environment, it is often preferred due to its flexibility and better parallel scaling. However, direct simulation of realistic applications, without the use of turbulence models, remains a distant dream even with highly efficient methods such as LBM. In LBM, a fictitious lattice with suitable isotropy in the velocity space is considered to recover Navier-Stokes hydrodynamics in macroscopic limit. The same lattice is mapped onto a cartesian grid for spatial discretization of the kinetic equation. In this paper, we present an inverted argument of the LBM, by making spatial discretization as the central theme. We argue that the optimal spatial discretization for LBM is a Body Centered Cubic (BCC) arrangement of grid points. We illustrate an order-of-magnitude gain in efficiency for LBM and thus a significant progress towards feasibility of DNS for realistic flows.},
-	author = {Namburi, Manjusha and Krithivasan, Siddharth and Ansumali, Santosh},
-	doi = {10.1038/srep27172},
-	issn = {2045-2322},
-	journal = {Sci. Rep.},
-	number = {1},
-	pages = {27172},
-	risfield_0_da = {2016/06/01},
-	title = {Crystallographic Lattice Boltzmann Method},
-	volume = {6},
-	year = {2016}
+@Comment{jabref-meta: databaseType:bibtex;}
+
+% Encoding: UTF-8
+
+@Article{2016-NamburiM+AnsumaliS-SciRep,
+  author        = {Namburi, Manjusha and Krithivasan, Siddharth and Ansumali, Santosh},
+  title         = {Crystallographic lattice {B}oltzmann method},
+  journal       = {Sci. Rep.},
+  year          = {2016},
+  volume        = {6},
+  number        = {1},
+  pages         = {27172},
+  issn          = {2045-2322},
+  abstract      = {Current approaches to Direct Numerical Simulation (DNS) are computationally quite expensive for most realistic scientific and engineering applications of Fluid Dynamics such as automobiles or atmospheric flows. The Lattice Boltzmann Method (LBM), with its simplified kinetic descriptions, has emerged as an important tool for simulating hydrodynamics. In a heterogeneous computing environment, it is often preferred due to its flexibility and better parallel scaling. However, direct simulation of realistic applications, without the use of turbulence models, remains a distant dream even with highly efficient methods such as LBM. In LBM, a fictitious lattice with suitable isotropy in the velocity space is considered to recover Navier-Stokes hydrodynamics in macroscopic limit. The same lattice is mapped onto a cartesian grid for spatial discretization of the kinetic equation. In this paper, we present an inverted argument of the LBM, by making spatial discretization as the central theme. We argue that the optimal spatial discretization for LBM is a Body Centered Cubic (BCC) arrangement of grid points. We illustrate an order-of-magnitude gain in efficiency for LBM and thus a significant progress towards feasibility of DNS for realistic flows.},
+  doi           = {10.1038/srep27172},
+  risfield_0_da = {2016/06/01},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
 % Encoding: UTF-8
 
@@ -1162,11 +1225,12 @@ introduce 5th-, 6th-, and 8th-order two-dimensional lattice-Boltzmann stencils.}
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
 
 @Article{2017-LiL+KlausnerJF-IntJHeatMassTran,
   author    = {Li, Like and Mei, Renwei and Klausner, James F.},
-  title     = {Lattice Boltzmann models for the convection-diffusion equation: D2Q5 vs D2Q9},
-  journal = {Int. J. Heat Mass Transf.},
+  title     = {Lattice {B}oltzmann models for the convection-diffusion equation: {D2Q5} vs {D2Q9}},
+  journal   = {Int. J. Heat Mass Transf.},
   year      = {2017},
   volume    = {108},
   pages     = {41--62},
@@ -1178,32 +1242,40 @@ introduce 5th-, 6th-, and 8th-order two-dimensional lattice-Boltzmann stencils.}
   url       = {https://doi.org/10.1016/j.ijheatmasstransfer.2016.11.092},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
-@article{2017-PengY+ZhangJM-MathProblEng,
-	author = {Peng, Y. and Meng, J. P. and Zhang, J. M.},
-	issn = {1024123X},
-	journal = {Math. Probl. Eng.},
-	keywords = {Mathematical research; Partial differential equations},
-	title = {Multispeed Lattice Boltzmann Model with Space-Filling Lattice for Transcritical Shallow Water Flows},
-	url = {https://link.gale.com/apps/doc/A546503697/AONE?u=capes&sid=AONE&xid=5221af59},
-	volume = {2017},
-	year = {2017}
+% Encoding: UTF-8
+
+@Article{2017-PengY+ZhangJM-MathProblEng,
+  author   = {Peng, Y. and Meng, J. P. and Zhang, J. M.},
+  title    = {Multispeed lattice {B}oltzmann model with space-filling lattice for transcritical shallow water flows},
+  journal  = {Math. Probl. Eng.},
+  year     = {2017},
+  volume   = {2017},
+  issn     = {1024123X},
+  keywords = {Mathematical research; Partial differential equations},
+  url      = {https://link.gale.com/apps/doc/A546503697/AONE?u=capes&sid=AONE&xid=5221af59},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
-@article{2018-AtifM+AnsumaliS-PhysRevE,
-  title = {Higher-order lattice Boltzmann model for thermohydrodynamics},
-  author = {Atif, Mohammad and Namburi, Manjusha and Ansumali, Santosh},
-  journal = {Phys. Rev. E},
-  volume = {98},
-  issue = {5},
-  pages = {053311},
-  year = {2018},
-  month = {Nov},
+% Encoding: UTF-8
+
+@Article{2018-AtifM+AnsumaliS-PhysRevE,
+  author    = {Atif, Mohammad and Namburi, Manjusha and Ansumali, Santosh},
+  title     = {Higher-order lattice {B}oltzmann model for thermohydrodynamics},
+  journal   = {Phys. Rev. E},
+  year      = {2018},
+  volume    = {98},
+  pages     = {053311},
+  month     = {Nov},
+  doi       = {10.1103/PhysRevE.98.053311},
+  issue     = {5},
   publisher = {American Physical Society},
-  doi = {10.1103/PhysRevE.98.053311},
-  url = {https://link.aps.org/doi/10.1103/PhysRevE.98.053311}
+  url       = {https://link.aps.org/doi/10.1103/PhysRevE.98.053311},
 }
+
+@Comment{jabref-meta: databaseType:bibtex;}
 
 
 @Book{2018-KrugerT+ViggenEM-Springer,
@@ -1218,20 +1290,24 @@ introduce 5th-, 6th-, and 8th-order two-dimensional lattice-Boltzmann stencils.}
 }
 
 
-@article{2020-FrapolliN+KarlinIV-Entropy,
-    title={Theory, Analysis, and Applications of the Entropic Lattice Boltzmann Model for Compressible Flows},
-    volume={22},
-    ISSN={1099-4300},
-    url={http://dx.doi.org/10.3390/e22030370},
-    DOI={10.3390/e22030370},
-    number={3},
-    journal={Entropy},
-    publisher={MDPI AG},
-    author={Frapolli, Nicolò and Chikatamarla, Shyam and Karlin, Ilya},
-    year={2020},
-    month={Mar},
-    pages={370},
+% Encoding: UTF-8
+
+@Article{2020-FrapolliN+KarlinIV-Entropy,
+  author    = {Frapolli, Nicolò and Chikatamarla, Shyam and Karlin, Ilya},
+  title     = {Theory, analysis, and applications of the entropic lattice {B}oltzmann model for compressible flows},
+  journal   = {Entropy},
+  year      = {2020},
+  volume    = {22},
+  number    = {3},
+  pages     = {370},
+  month     = {Mar},
+  issn      = {1099-4300},
+  doi       = {10.3390/e22030370},
+  publisher = {MDPI AG},
+  url       = {http://dx.doi.org/10.3390/e22030370},
 }
+
+@Comment{jabref-meta: databaseType:bibtex;}
 
 % Encoding: UTF-8
 
