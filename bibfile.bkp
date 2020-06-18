@@ -222,8 +222,8 @@
 
 @Article{1991-KoelmanJMVA-EuroPhysLett,
   author    = {Koelman, J. M. V. A.},
-  title     = {A Simple Lattice {B}oltzmann Scheme for {N}avier-{S}tokes Fluid Flow.},
-  journal = {Europhys. Lett.},
+  title     = {A simple lattice {B}oltzmann scheme for {N}avier-{S}tokes fluid flow.},
+  journal   = {Europhys. Lett.},
   year      = {1991},
   volume    = {15},
   number    = {6},
@@ -296,8 +296,8 @@
 
 @Article{1992-QianYH+LallemandP-EuroPhysLett,
   author    = {Qian, Y. H. and D'Humières, D. and Lallemand, P.},
-  title     = {Lattice {BGK} Models for {N}avier-{S}tokes Equation},
-  journal = {Europhys. Lett.},
+  title     = {Lattice {BGK} models for {N}avier-{S}tokes equation},
+  journal   = {Europhys. Lett.},
   year      = {1992},
   volume    = {17},
   number    = {6},
@@ -406,7 +406,7 @@
 
 @Article{1997-HeX+LuoLS-PhysRevE-APriori,
   author    = {He, Xiaoyi and Luo, Li-Shi},
-  title     = {A priori derivation of the lattice{ B}oltzmann equation},
+  title     = {A priori derivation of the lattice {B}oltzmann equation},
   journal   = {Phys. Rev. E},
   year      = {1997},
   volume    = {55},
@@ -691,19 +691,21 @@ computational efficiency of the standard lattice Boltzmann model.},
 }
 
 
+% Encoding: UTF-8
 
 @MastersThesis{2007-OrtizCEP-DrUFSC,
-  author    = {Ortiz, Carlos Henrique Pico},
-  title     = {Aplica\c{c}\~ao das Formas Discretas da Equa\c{c}\~ao de Boltzmann \`a Termo-hidrodin\^amica de Misturas},
-  school    = {Universidade Federal de Santa Catarina},
-  year      = {2007},
-  type      = {phdthesis},
-  month     = aug,
-  abstract  = {In this work is shown a formal and systematic derivation procedure of a set of differential equations, in space $(x; t)$, from the Boltzmann transport equation, in space $(x; c; t)$, which transfer equations represent properly the thermohydrodynamics of a compressible fluid. For this purpose, the particle distribution function was expanded in a base of the Hilbert space of functions, spanned by the Hermite polynomial tensors of the molecular velocity c, which weight function can be identified as a global Maxwellian distribution function. The truncation order of this series is the one required to obtain the Navier-Stokes-Fourier equations, through the asymptotic Chapman-Enskog analysis. The velocity space was driscretized in order to guarantee that the moments of the approximation to the distribution function can be accurately represented by a quadrature formula. Solutions to the quadrature problem in two and three dimensions, for several approximation orders, were shown and discussed, mainly the relation between the regular cartesian solutions and the Lattice Boltzmann Method $(LBM)$. The solution of the resulting set of partial differential equations of $f_{i}(x; t)$ was accomplished by explicit finite difference method. The method allows for a consistent treatment of the hydrodynamics equations of mixtures of gases with non-homogeneous temperature fields and with different molecular mass components. The procedure was verified by the implementation of a BGK model for simple gases and binary mixtures of gases, with one and three relaxation parameters, respectively. A Chapman-Enskog analysis of the implemented models was developed to obtain the explicit forms of the difusive mass flux, the pressure tensor and the heat flux, and the transport coeficients: binary difusion coefcient, viscosity and thermal conductivity. These results were compared satisfactorily against analytical solutions of the advection-difusion equation with several initial conditions.},
-  keywords  = {Lattice Boltzmann Method; Discrete Boltzmann Equation; Kinetic theory of mixtures},
-  url       = {https://repositorio.ufsc.br/xmlui/bitstream/handle/123456789/90489/250557.pdf?sequence=1},
+  author   = {Ortiz, Carlos Henrique Pico},
+  title    = {Aplicação das formas discretas da equação de {B}oltzmann à termo-hidrodinâmica de misturas},
+  school   = {Universidade Federal de Santa Catarina},
+  year     = {2007},
+  type     = {phdthesis},
+  month    = aug,
+  abstract = {In this work is shown a formal and systematic derivation procedure of a set of differential equations, in space $(x; t)$, from the Boltzmann transport equation, in space $(x; c; t)$, which transfer equations represent properly the thermohydrodynamics of a compressible fluid. For this purpose, the particle distribution function was expanded in a base of the Hilbert space of functions, spanned by the Hermite polynomial tensors of the molecular velocity c, which weight function can be identified as a global Maxwellian distribution function. The truncation order of this series is the one required to obtain the Navier-Stokes-Fourier equations, through the asymptotic Chapman-Enskog analysis. The velocity space was driscretized in order to guarantee that the moments of the approximation to the distribution function can be accurately represented by a quadrature formula. Solutions to the quadrature problem in two and three dimensions, for several approximation orders, were shown and discussed, mainly the relation between the regular cartesian solutions and the Lattice Boltzmann Method $(LBM)$. The solution of the resulting set of partial differential equations of $f_{i}(x; t)$ was accomplished by explicit finite difference method. The method allows for a consistent treatment of the hydrodynamics equations of mixtures of gases with non-homogeneous temperature fields and with different molecular mass components. The procedure was verified by the implementation of a BGK model for simple gases and binary mixtures of gases, with one and three relaxation parameters, respectively. A Chapman-Enskog analysis of the implemented models was developed to obtain the explicit forms of the difusive mass flux, the pressure tensor and the heat flux, and the transport coeficients: binary difusion coefcient, viscosity and thermal conductivity. These results were compared satisfactorily against analytical solutions of the advection-difusion equation with several initial conditions.},
+  keywords = {Lattice Boltzmann Method; Discrete Boltzmann Equation; Kinetic theory of mixtures},
+  url      = {https://repositorio.ufsc.br/xmlui/bitstream/handle/123456789/90489/250557.pdf?sequence=1},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
 
 @Article{2007-PhilippiPC+DosSantosLOE-IntJModPhysC,
@@ -915,18 +917,20 @@ computational efficiency of the standard lattice Boltzmann model.},
 }
 
 
+% Encoding: UTF-8
 
 @MastersThesis{2010-HegeleLA-DrUFSC,
-  author    = {Hegele, Luiz Adolfo J\'unior},
-  title     = {Equa\c{c}\~ao de Boltzmann em rede para escoamentos t\'ermicos},
-  school    = {Universidade Federal de Santa Catarina},
-  year      = {2010},
-  type      = {mathesis},
-  month     = may,
-  abstract  = {In order to simulate the fully compressible thermohydrodynamical flows using the Boltzmann equation, much of the attention has to be paid in the process of the discretization of the velocity space. Hence, the physical connection between the lattice-Boltzmann equation and its continuous counterpart is taken into account and a procedure is formally derived. The velocity discretization is performed through a quadrature process, where the discrete norm of the tensor Hermite polynomials of the given order of approximation is made equal to the continuous norm of the Hermite polynomials in the Hilbert space. The method, named prescribed abscissas quadrature, allows one to locate the poles of integration leading to exact streaming schemes, an important attribute of the lattice-Boltzmann method. Using this prescribed abscissas quadrature, conventional lattice-Boltzmann models, such as $D1Q3$, $D2Q7$, $D2Q9$, $D3Q15$, $D3Q19$ and $D3Q27$ are obtained, and also lattices of higher orders for one, two and three dimensions. Instead of using a posteriori techniques to match coefficients in an expanded equilibrium distribution function, the Maxwellian distribution function is approximated according to a chosen order. A linear stability analysis is applied and shows the better performance of the proposed method when confronted to other methods.},
-  keywords  = {Lattice-Boltzmann method, discrete Boltzmann equation, quadrature problem},
+  author   = {Hegele, Luiz Adolfo Júnior},
+  title    = {Equação de {B}oltzmann em rede para escoamentos térmicos},
+  school   = {Universidade Federal de Santa Catarina},
+  year     = {2010},
+  type     = {mathesis},
+  month    = may,
+  abstract = {In order to simulate the fully compressible thermohydrodynamical flows using the Boltzmann equation, much of the attention has to be paid in the process of the discretization of the velocity space. Hence, the physical connection between the lattice-Boltzmann equation and its continuous counterpart is taken into account and a procedure is formally derived. The velocity discretization is performed through a quadrature process, where the discrete norm of the tensor Hermite polynomials of the given order of approximation is made equal to the continuous norm of the Hermite polynomials in the Hilbert space. The method, named prescribed abscissas quadrature, allows one to locate the poles of integration leading to exact streaming schemes, an important attribute of the lattice-Boltzmann method. Using this prescribed abscissas quadrature, conventional lattice-Boltzmann models, such as $D1Q3$, $D2Q7$, $D2Q9$, $D3Q15$, $D3Q19$ and $D3Q27$ are obtained, and also lattices of higher orders for one, two and three dimensions. Instead of using a posteriori techniques to match coefficients in an expanded equilibrium distribution function, the Maxwellian distribution function is approximated according to a chosen order. A linear stability analysis is applied and shows the better performance of the proposed method when confronted to other methods.},
+  keywords = {Lattice-Boltzmann method, discrete Boltzmann equation, quadrature problem},
 }
 
+@Comment{jabref-meta: databaseType:bibtex;}
 
 @article{2010-ShanX-PhysRevE,
   title = {General solution of lattices for Cartesian lattice Bhatanagar-Gross-Krook models},
