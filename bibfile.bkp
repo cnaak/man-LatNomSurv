@@ -1156,6 +1156,20 @@ introduce 5th-, 6th-, and 8th-order two-dimensional lattice-Boltzmann stencils.}
 
 % Encoding: UTF-8
 
+@Misc{2016-AndradeFN-MEngUTFPR,
+  author   = {Andrade, Felipe Nascimento de},
+  title    = {Systematics of obtaining methods of lattice {B}oltzmann method for the prescribed abscissae},
+  month    = jun,
+  year     = {2016},
+  note     = {TCC surpervised by C.~Naaktgeboren},
+  abstract = {The lattice Boltzmann methods, LBM, are a set of numerical methods for simulation of transport phenomena which may be based in the discretization of Boltzmann equation, which governs evolution of probability distribution function of single particle, in terms of microscopic velocities and position in the time. Lattice Boltzmann methods uses spacial lattices whose nodes $\{x_j\}$ represents the set of discrete positions associate to a finite set of microscopic discrete velocities $\{\xi_j\}$ and their respective probabilities $f(x_j, \xi_j)$. In general, the greater the number $j$ of microscopic discrete velocities for each localization $x_j$ the higher the order of approximation of $f(x_j, \xi_j)$. Since primary macroscopics quantities and their respective derivatives are obtained by crescent order moments of f in the velocities space, in the lattice Boltzmann methods microscopic, discrete velocities assembly refinaments lead to solution of more physics by numerical scheme. This feature, without equivalent in methods based on macroscopic formulations of transport phenomena motivates the acquisition and exploration of various methods of lattice Boltzmann based on lattices of different configurations. The proposed research aims to investigate the systematic Philippi et al. (2006) to bypass stencils lattice Boltzmann for a given space reticulum and its associated speeds through the discretization of the Boltzmann equation using Hermite projections bases. These stencils are sets of quadrature weights, speed of sound, speed scale and speed of the lattice lattice Boltzmann own and uses it as an input parameter in the methods of lattice Boltzmann. As accuracy requirement in the advection, which aims avoid numerical diffusion in the simulation results, the velocities should exactly fit in a lattice n dimensional with b velocities, so, all velocities should be a linear combination of integer coefficients other. Once validated, aims with the systematic derive higher order lattice Boltzmann methods. The systematic validation It occurred through comparisions with low and medium order methods found in the literature.},
+  url      = {http://repositorio.roca.utfpr.edu.br/jspui/handle/1/8774},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+% Encoding: UTF-8
+
 @Article{2016-FrapolliN+KarlinIV-PhysRevE,
   author    = {Frapolli, N. and Chikatamarla, S. S. and Karlin, I. V.},
   title     = {Entropic lattice {B}oltzmann model for gas dynamics: theory, boundary conditions, and implementation},
@@ -1291,6 +1305,20 @@ introduce 5th-, 6th-, and 8th-order two-dimensional lattice-Boltzmann stencils.}
   isbn      = {978-3-319-44647-9},
 }
 
+
+% Encoding: UTF-8
+
+@Misc{2019-daRosaTG-MEngUTFPR,
+  author   = {da Rosa, Tiago Gaspar},
+  title    = {Solution algorithm for the prescribed abscissas method for lattice-{B}oltzmann methods in two {E}uclidean dimensions},
+  month    = jul,
+  year     = {2019},
+  note     = {TCC surpervised by C.~Naaktgeboren},
+  abstract = {The lattice-Boltzmann mesoscopic methods, act by the numerical solution of the Boltzmann equation for a particle probabilistic distribution function, allowing the retrieval of the system macroscopic quantities. The particles are distributed and interact in lattices that discretize a velocity space and a spatial space. The set formed by the weights, discrete velocities and the scale of lattice is called stencil. The velocity space from the continuous equation discretization is a critical step in the Boltzmann stencils derivation. There are diﬀerent ways to conduct it, such that one, prescribed abscissas method, works with a set of predeﬁned dimensionless discrete velocities. The problem, a quadrature for the weights and the lattice scale determination, is equivalent to an internal product tensor between two Hermite tensor polynomials in the discrete space. There is no detailed procedure in the bibliography about how to solve the quadratures, so this work will investigate algorithms to solve them, which lead to the creation of new lattice-Boltzmann methods.},
+  url      = {http://repositorio.roca.utfpr.edu.br/jspui/handle/1/11623},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
 
 % Encoding: UTF-8
 
@@ -1504,18 +1532,4 @@ year = {1949}
   doi = {10.1103/PhysRev.94.511},
   url = {https://link.aps.org/doi/10.1103/PhysRev.94.511}
 }
-
-% Encoding: UTF-8
-
-@Misc{2019-daRosaTG-MEngUTFPR,
-  author   = {da Rosa, Tiago Gaspar},
-  title    = {Solution algorithm for the prescribed abscissas method for lattice-{B}oltzmann methods in two {E}uclidean dimensions},
-  month    = jul,
-  year     = {2019},
-  note     = {Undergraduate Final Project},
-  abstract = {The lattice-Boltzmann mesoscopic methods, act by the numerical solution of the Boltzmann equation for a particle probabilistic distribution function, allowing the retrieval of the system macroscopic quantities. The particles are distributed and interact in lattices that discretize a velocity space and a spatial space. The set formed by the weights, discrete velocities and the scale of lattice is called stencil. The velocity space from the continuous equation discretization is a critical step in the Boltzmann stencils derivation. There are diﬀerent ways to conduct it, such that one, prescribed abscissas method, works with a set of predeﬁned dimensionless discrete velocities. The problem, a quadrature for the weights and the lattice scale determination, is equivalent to an internal product tensor between two Hermite tensor polynomials in the discrete space. There is no detailed procedure in the bibliography about how to solve the quadratures, so this work will investigate algorithms to solve them, which lead to the creation of new lattice-Boltzmann methods.},
-  url      = {http://repositorio.roca.utfpr.edu.br/jspui/handle/1/11623},
-}
-
-@Comment{jabref-meta: databaseType:bibtex;}
 
