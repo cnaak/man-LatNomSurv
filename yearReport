@@ -1,7 +1,10 @@
 #!/bin/bash
 
+function yrefs() {
+    bib LST $1 2>/dev/null | paste -s -d'#' | sed 's|#$||g;s|#|, |g'
+}
+
 for y in $(years); do
-    echo $y | center | frame
-    bib LST $y 2>/dev/null
+    echo "\\textbf{$y}: \\cite{$(yrefs $y)}"
 done
 
