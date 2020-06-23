@@ -34,22 +34,3 @@
 \bibliographystyle{plain}
 \bibliography{bibfile}
 %-------------------------------------------------------------------------------------------------------------------------------
-
-%------------------------------------------------------------------------------------------------------------------------------%
-%                                                           APPENDIX                                                           %
-%------------------------------------------------------------------------------------------------------------------------------%
-
-\appendix
-
-\makeatletter
-\renewcommand{\thesection}{\@Alph\c@section}
-\makeatother
-
-\renewcommand*{\thesection}{\Alph{section}}
-
-\section{Citations by Year}
-%\addcontentsline{toc}{section}{\protect\numberline{\thesection}}
-
-    The following are the citations indexed by year in chronological order: \input{./yearReport.tex}
-
-
