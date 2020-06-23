@@ -38,7 +38,7 @@
     Historically,   the   lattice-Boltzmann   (LB)    method    had    its    origins    in    the    frame    of    Lattice-Gas
     Automata~\cite{1988-McNamaraGR+ZanettiG-PhysRevLett},     and     has     been     intensely     developed     since     its
     inception~\cite{1992-BenziR+VergassolaM-PhysRep,       1998-ChenS+DoolenGD-AnnuRevFluidMech,        2011-MohamadAA-Springer,
-    2018-KrugerT+ViggenEM-Springer}. One important conceptual and implementational parameter  of  LB  methods  is  the  employed
+    2018-KrugerT+ViggenEM-Springer}. One important conceptual and implementation parameter  of  LB  methods  is  the  employed
     \emph{lattice    stencil}---understood    as    the    lattice    geometry,    velocity    set,    weights,    and     scale
     parameters~\cite{2013-HegeleJr+PhilippiPC-JSciComput,                                2013-MattilaKK+PhilippiPC-IntJModPhysC,
     2014-MattilaKK+PhilippiPC-SciWorldJ}, although some authors may include  in  the  stencil  designation  additional  modeling
@@ -101,11 +101,11 @@
 
     Moreover, Koelman~\cite{1991-KoelmanJMVA-EuroPhysLett} had proposed matching discrete velocity moments up to a certain order
     $n$ with the $d$-dimensional continuous Boltzmann distribution, since only those  moments  influence  the  macroscopic  flow
-    behaviour; such procedure would yield values for lattice velocity \emph{weights} $W_{\alpha}$. The  proposed  criteria  were
+    behavior; such procedure would yield values for lattice velocity \emph{weights} $W_{\alpha}$. The  proposed  criteria  were
     deemed more stringent than previously well-known symmetry  and  isotropy  requirements  from~\cite{1986-WolframS-JStatPhys},
     since it not only led to an isotropic macroscopic description, but also ensure  pressure  term  independence  from  velocity
     terms of the Navier-Stokes description. Furthermore, a skewed rectangular 9-speed lattice with independent $a$ and $b$  axis
-    lengths was proposed\footnote{That lattice was named `face-centred rectangular'  by  the  author.},  whose  weights  exactly
+    lengths was proposed\footnote{That lattice was named `face-centered rectangular'  by  the  author.},  whose  weights  exactly
     recover those of the well-known D2Q9 lattice for $a = b$, over which the argument that valid weights `[...] \emph{can always
     be found by choosing a large enough set of} (lattice) \emph{velocity vectors\/} [...]'~\cite{1991-KoelmanJMVA-EuroPhysLett}.
 
@@ -117,7 +117,7 @@
 
     Some `nDmV' lattices, with $n$ being the Euclidean space dimension and $m$ the lattice velocity count, namely, 1D5V,  2D16V,
     and 3D40V, were introduced in~\cite{1994-ChenY+AkiyamaM-PhysRevE} for  shock  wave  front  structure  and  shear  wave  flow
-    application cases. The 2D16V lattice, for instance, was said to  be  comprised  of  four  \emph{sublattices}---a  term  that
+    application cases. The 2D16V lattice, for instance, was said to  be  comprised  of  four  \emph{sub-lattices}---a  term  that
     appeared in subsequent references---with each sublattice having 4 discrete velocities of same magnitude and forming adjacent
     right angles, which led to possibly \emph{multiple sublattices per lattice energy level} $\epsilon \equiv 2e  =  c^2$,  with
     $c$ being the microscopic (lattice) velocity magnitude, and $e$ the corresponding specific kinetic energy, as was  the  case
@@ -169,7 +169,7 @@
     %---------------------------------------------------------------------------------------------------------------------------
     \subsection{The Year of 2006}
 
-    The year of 2006 is seemingly a landmark for multi-velocity, higher-order LB schemes---and  incidently  for  lattice  naming
+    The year of 2006 is seemingly a landmark for multi-velocity, higher-order LB schemes---and  incidentally  for  lattice  naming
     schemes---as evidenced by the appearance of three key publications, namely those of  Shan,~X.,  Yuan,~X.-F.,  and  Chen,~H.,
     \cite{2006-ShanX+ChenH-JFluidMech},   of   Philippi,~P.~C.,   Hegele,~L.~A.,   dos    Santos,~L.~O.~E.    and    Surmas,~R.,
     \cite{2006-PhilippiPC+SurmasR-PhysRevE},        and        of         Chikatamarla,~S.~S.         and         Karlin,~I.~V.,
@@ -178,7 +178,7 @@
 
     \vspace{2.0mm}\noindent\textbf{Shan and Coauthors:}\vspace{1.0mm}
 
-    A  sistematic   discretization   framework   for   the   Boltzmann   equation   was   proposed   by   Shan   and   coauthors
+    A  systematic   discretization   framework   for   the   Boltzmann   equation   was   proposed   by   Shan   and   coauthors
     in~\cite{2006-ShanX+ChenH-JFluidMech}.  From  kinetic  theory~\cite{2011-HarrisS-Dover,   2003-LiboffRL-bookSpringer},   the
     authors pointed out  that  successive  Chapman-Enskog  approximations  of  the  Boltzmann  equation  obtain  the  (i)~Euler,
     (ii)~Navier-Stokes, (iii)~Burnett, and (iv)~high\-er-or\-der macroscopic equations---meaning progressively  high\-er-or\-der
@@ -194,7 +194,7 @@
     established the following comparisons, which were off only by a scaling factor: $D2Q9 \propto E_{2,5}^{9}$,  $D3Q15  \propto
     E_{3,5}^{15}$, and $D3Q19 \propto E_{3,5}^{19}$.
 
-    Additionally, they stablished that Gauss-Hermite quadratures of the Boltzmann equation yield LB  models  with  \emph{minimum
+    Additionally, they established that Gauss-Hermite quadratures of the Boltzmann equation yield LB  models  with  \emph{minimum
     velocity count} for a given degree of precision and Euclidean spacial dimension, without, however, the ability to  predefine
     (choose) the discrete velocity abscisae,  which  apart  from  special  cases  fails  to  produce  a  space-filling,  Bravais
     lattice---recalling that for LB methods, this means lower memory requirements but decoupled spatial  and  momentum  `meshes'
@@ -242,7 +242,7 @@
     with increased velocity counts, many of which requiring changes or adaptations in the naming scheme, as  the  sequence  will
     show.
 
-    Immediate examples~\cite{2006-PhilippiPC+SurmasR-PhysRevE} include (i)~\emph{two} forms of bidimensional, 17-velocity  ones,
+    Immediate examples~\cite{2006-PhilippiPC+SurmasR-PhysRevE} include (i)~\emph{two} forms of bi-dimensional, 17-velocity  ones,
     named D2Q17 and D2V17 for distinction; (ii)~a D2Q21 one; as well as (iii)~\emph{two}  forms  of  bidimensional,  25-velocity
     ones, named D2V25(W1) and D2V25(W6), containing the energy levels $\epsilon \in \{0,$ $2,$ $4,$ $8,$ $9,$ $16,$ $18\}$,  and
     $\epsilon \in \{0,$ $1,$ $2,$ $4,$ $8,$ $9,$ $16\}$, respectively---thus without the energy levels (hence, weights)  labeled
@@ -294,7 +294,7 @@
 
     \vspace{2.0mm}\noindent\textbf{Late 2000's:}\vspace{1.0mm}
 
-    The onset of sistematic techniques  for  LB  stencils  fabrication  in  2006~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett,
+    The onset of systematic techniques  for  LB  stencils  fabrication  in  2006~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett,
     2006-PhilippiPC+SurmasR-PhysRevE, 2006-ShanX+ChenH-JFluidMech}, allied to the expansion of LB  simulation  applications  and
     domains, contributed to the proliferation of LB stencils over the following years. This further highlighted the  ambiguities
     in velocity count-based naming schemes, as well as prompted the appearance of further lattice naming variety.
@@ -318,7 +318,7 @@
     On patent~\cite{2008-ShanX+ZhangR-USPat}, authors designate Cartesian,  space-filling  models  with  21,  37,  39,  and  103
     velocities, as `2D-1', `2D-2', `3D-1', and `3D-2', respectively.
 
-    Discussion on a plurality of lattices and lattice  operations,  such  as  stretching,  extending  (product),  prunning,  and
+    Discussion on a plurality of lattices and lattice  operations,  such  as  stretching,  extending  (product),  pruning,  and
     superimposing, takes place in~\cite{2009-ChikatamarlaSS+KarlinIV-PhysRevE}; noteworthy ones are the  D$1$Q$(1+2k)$  lattices
     for $k \in \{1, \ldots, 4\}$, the higher-order ones also referred to `1D seven/nine velocity set'; the `ZOT', i.e.,  `\{$0$,
     $\pm 1$, $\pm 3$\}', or  `zero-one-three'  1-D  lattice;  the  `D1Q5-ZOT  lattice',  defined  as  ``{\swshape  the  shortest
@@ -338,12 +338,12 @@
         D3Q125\mbox{-ZOT} \equiv (D2Q25\mbox{-ZOT}) \otimes (D1Q5\mbox{-ZOT});
     \end{equation}
     %
-    \noindent and also it's prunned version `D3Q41-ZOT', obtained by prunning, or, symmetrically removing velocity subsets.
+    \noindent and also it's pruned version `D3Q41-ZOT', obtained by pruning, or, symmetrically removing velocity subsets.
 
-    It is worth noting that prunning operations deal with discrete velocity  groups  of  \emph{same  magnitude};  hence,  energy
-    levels---so that prunning remove entire energy levels from a departure lattice configuration.
+    It is worth noting that pruning operations deal with discrete velocity  groups  of  \emph{same  magnitude};  hence,  energy
+    levels---so that pruning remove entire energy levels from a departure lattice configuration.
 
-    Several lattice stecils are given in~\cite{2009-SurmasR+PhilippiPC-EurPhysJSpecialTopics} \emph{mostly} in the `DdVb' naming
+    Several lattice stencils are given in~\cite{2009-SurmasR+PhilippiPC-EurPhysJSpecialTopics} \emph{mostly} in the `DdVb' naming
     scheme from~\cite{2006-PhilippiPC+SurmasR-PhysRevE}, but also including an `n' suffix, as in D1V9n, D2V28n, and  D3V53n,  as
     to indicate the lattice is not space-filling, and also in the `\{$0$, $\pm a$, $\pm b$\}' format, in which  $b$  can  be  an
     explicit multiple of $a$, as in \{$0$, $\pm a$, $\pm 3a$\}, naming schemes. Bravais lattices are given up to  D1V15,  D2V53,
@@ -424,7 +424,7 @@
     designations.
 
     Velocity count-based lattice naming ambiguities arose in~\cite{2017-PengY+ZhangJM-MathProblEng}, in which the different  yet
-    homonimous            `D1Q5'            lattices            from            references~\cite{1998-QianYH+ZhouY-EuroPhysLett,
+    homonymous            `D1Q5'            lattices            from            references~\cite{1998-QianYH+ZhouY-EuroPhysLett,
     2006-ChikatamarlaSS+KarlinIV-PhysRevLett}---one with $\{0,$ $\pm 1,$ $\pm 2\}$, and the other with $\{0,$ $\pm 1,$ $\pm 3\}$
     velocity sets---were distinguished by an `A' or `B' suffix, making them D1Q5A and D1Q5B.
 
@@ -438,7 +438,7 @@
 \section{Discussion}
 
     From the lattice naming systems survey of the previous Section, one finds that many lattice  naming  schemes  have  appeared
-    over the years, with each new variety either introduced as to accomodate or reflect a new aspect brought in the research, as
+    over the years, with each new variety either introduced as to accommodate or reflect a new aspect brought in the research, as
     with~\cite{2006-ShanX+ChenH-JFluidMech,     2008-ChikatamarlaSS+KarlinIV-CompPhysComm,     2006-PhilippiPC+SurmasR-PhysRevE,
     2012-AmbrusVE+SofoneaV-PhysRevE, 2016-NamburiM+AnsumaliS-SciRep}, or to organize and distinguish multiple lattices within  a
     publication,        as        with~\cite{1991-QianYH+LallemandP-AdvKinTheoContMech,        2006-PhilippiPC+SurmasR-PhysRevE,
@@ -479,9 +479,9 @@
     It is worth noting that all `mainstream' lattice naming schemes---whether `$E_{D,n}^{d}$', `DdQb' and  its  variations---are
     able to describe space-filling, Bravais lattices. Yet, all  such  lattice  naming  schemes  are  velocity  count  based  and
     therefore suffer from ambiguity, as, for instance, the sole `D2Q25' (or `D2V25', or `D2Q$5^2$') information \emph{can}  mean
-    many different lattice configurations, having completely different envelope shapes, conception strattegy, set  of  populated
+    many different lattice configurations, having completely different envelope shapes, conception strategy, set  of  populated
     energy levels, and optional shiftings, since it only specifies a set of  25  discrete  velocities  in  two  Euclidean  space
-    dimentions, and, in the case of the `$E_{D,n}^{d}$' scheme, the resulting order of approximation.
+    dimensions, and, in the case of the `$E_{D,n}^{d}$' scheme, the resulting order of approximation.
 
     Aiming at space-filling, regular, Bravais types in one- to three-dimensional Euclidean spaces with complete, fully-populated
     energy levels,  the  authors  conjecture~\cite{2020-NaaktgeborenC+AndradeFN-BravLatNam-engrXiv-rev00}  that  a  scheme  with
@@ -519,7 +519,7 @@
     From the survey and from the diversity of lattice types, it becomes somewhat  clear  that  (a)~probably  there  will  be  no
     generic and concise `one-size-fits-all' naming scheme for all surveyed models, let alone, published ones, and (b)~a concise,
     unambiguous naming scheme, at least for the more regular lattice types is in order, as to enable the necessary  distinctions
-    between    models    of    same    dimensionality    and    velocity    count.    An     upcomming     work     from     the
+    between    models    of    same    dimensionality    and    velocity    count.    An     upcoming     work     from     the
     authors~\cite{2020-NaaktgeborenC+AndradeFN-BravLatNam-engrXiv-rev00} is to make a proposition.
 
 %-------------------------------------------------------------------------------------------------------------------------------
