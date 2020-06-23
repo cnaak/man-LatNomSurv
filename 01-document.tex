@@ -38,7 +38,7 @@
     Historically,   the   lattice-Boltzmann   (LB)    method    had    its    origins    in    the    frame    of    Lattice-Gas
     Automata~\cite{1988-McNamaraGR+ZanettiG-PhysRevLett},     and     has     been     intensely     developed     since     its
     inception~\cite{1992-BenziR+VergassolaM-PhysRep,       1998-ChenS+DoolenGD-AnnuRevFluidMech,        2011-MohamadAA-Springer,
-    2018-KrugerT+ViggenEM-Springer}. One important conceptual and implementation parameter  of  LB  methods  is  the  employed
+    2018-KrugerT+ViggenEM-Springer}. One important conceptual and  implementation  parameter  of  LB  methods  is  the  employed
     \emph{lattice    stencil}---understood    as    the    lattice    geometry,    velocity    set,    weights,    and     scale
     parameters~\cite{2013-HegeleJr+PhilippiPC-JSciComput,                                2013-MattilaKK+PhilippiPC-IntJModPhysC,
     2014-MattilaKK+PhilippiPC-SciWorldJ}, although some authors may include  in  the  stencil  designation  additional  modeling
@@ -96,16 +96,16 @@
     As far as increasing lattice velocity counts go, the relationship between mesoscopic lattice \emph{symmetry}  and  resulting
     macroscopic   description   \emph{isotropy}   has   been   established    from    early    in    the    history    of    LGA
     methods~\cite{1973-HardyJ+PazzisO-JMathPhys, 1976-HardyJ+PomeauY-PhysRevA},  in  two~\cite{1986-FrischU+PomeauY-PhysRevLett}
-    and  in  three  Euclidean   dimensions,   the   latter   requiring   the   lattice   to   include   links   beyond   nearest
-    neighbors~\cite[pp.~473, 490]{1986-WolframS-JStatPhys}, hence particle velocities with unequal magnitudes.
+    and in three Euclidean dimensions, the latter requiring the lattice to include links beyond nearest neighbors~\cite[pp.~473,
+    490]{1986-WolframS-JStatPhys}, hence particle velocities with unequal magnitudes.
 
     Moreover, Koelman~\cite{1991-KoelmanJMVA-EuroPhysLett} had proposed matching discrete velocity moments up to a certain order
     $n$ with the $d$-dimensional continuous Boltzmann distribution, since only those  moments  influence  the  macroscopic  flow
-    behavior; such procedure would yield values for lattice velocity \emph{weights} $W_{\alpha}$. The  proposed  criteria  were
+    behavior; such procedure would yield values for lattice velocity \emph{weights} $W_{\alpha}$.  The  proposed  criteria  were
     deemed more stringent than previously well-known symmetry  and  isotropy  requirements  from~\cite{1986-WolframS-JStatPhys},
     since it not only led to an isotropic macroscopic description, but also ensure  pressure  term  independence  from  velocity
     terms of the Navier-Stokes description. Furthermore, a skewed rectangular 9-speed lattice with independent $a$ and $b$  axis
-    lengths was proposed\footnote{That lattice was named `face-centered rectangular'  by  the  author.},  whose  weights  exactly
+    lengths was proposed\footnote{That lattice was named `face-centered rectangular' by  the  author.},  whose  weights  exactly
     recover those of the well-known D2Q9 lattice for $a = b$, over which the argument that valid weights `[...] \emph{can always
     be found by choosing a large enough set of} (lattice) \emph{velocity vectors\/} [...]'~\cite{1991-KoelmanJMVA-EuroPhysLett}.
 
@@ -117,7 +117,7 @@
 
     Some `nDmV' lattices, with $n$ being the Euclidean space dimension and $m$ the lattice velocity count, namely, 1D5V,  2D16V,
     and 3D40V, were introduced in~\cite{1994-ChenY+AkiyamaM-PhysRevE} for  shock  wave  front  structure  and  shear  wave  flow
-    application cases. The 2D16V lattice, for instance, was said to  be  comprised  of  four  \emph{sub-lattices}---a  term  that
+    application cases. The 2D16V lattice, for instance, was said to be  comprised  of  four  \emph{sub-lattices}---a  term  that
     appeared in subsequent references---with each sublattice having 4 discrete velocities of same magnitude and forming adjacent
     right angles, which led to possibly \emph{multiple sublattices per lattice energy level} $\epsilon \equiv 2e  =  c^2$,  with
     $c$ being the microscopic (lattice) velocity magnitude, and $e$ the corresponding specific kinetic energy, as was  the  case
