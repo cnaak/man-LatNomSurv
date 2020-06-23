@@ -5,6 +5,10 @@ function yrefs() {
 }
 
 for y in $(years); do
-    echo "\\textbf{$y}: \\cite{$(yrefs $y)}"
+    if test "$y" != "2020"; then
+        echo "\\textbf{$y}: \\cite{$(yrefs $y)},"
+    else
+        echo "\\textbf{$y}: \\cite{$(yrefs $y)}."
+    fi
 done
 
