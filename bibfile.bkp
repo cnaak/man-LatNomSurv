@@ -515,6 +515,24 @@
 
 % Encoding: UTF-8
 
+@Article{2002-SucciS+ChenH-RevModPhys,
+  author    = {Succi, Sauro and Karlin, Iliya V. and Chen, Hudong},
+  title     = {Colloquium: {R}ole of the {H} theorem in lattice {B}oltzmann hydrodynamic simulations},
+  journal   = {Rev. Mod. Phys.},
+  year      = {2002},
+  volume    = {74},
+  pages     = {1203--1220},
+  month     = {Nov},
+  doi       = {10.1103/RevModPhys.74.1203},
+  issue     = {4},
+  publisher = {American Physical Society},
+  url       = {https://link.aps.org/doi/10.1103/RevModPhys.74.1203},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+% Encoding: UTF-8
+
 @Article{2003-AnsumaliS+OettingerHC-EuroPhysLett,
   author    = {Ansumali, S. and Karlin, I. V. and Öttinger, H. C.},
   title     = {Minimal entropic kinetic models for hydrodynamics},
@@ -1341,6 +1359,17 @@ introduce 5th-, 6th-, and 8th-order two-dimensional lattice-Boltzmann stencils.}
 
 % Encoding: UTF-8
 
+@Misc{2020-NaaktgeborenC+AndradeFN-BravLatNam-engrXiv-rev00,
+  author    = {Naaktgeboren, C. and de Andrade, F. N.},
+  title     = {{B}ravais lattice naming schemes for lattice-{B}oltzmann methods},
+  note      = {To appear soon.},
+  publisher = {engrXiv},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+% Encoding: UTF-8
+
 @Article{1973-HardyJ+PazzisO-JMathPhys,
   author  = {Hardy, J. and Pomeau, Y. and de Pazzis, O.},
   title   = {Time evolution of a two‐dimensional model system. {I.} {I}nvariant states and time correlation functions},
@@ -1532,15 +1561,4 @@ year = {1949}
   doi = {10.1103/PhysRev.94.511},
   url = {https://link.aps.org/doi/10.1103/PhysRev.94.511}
 }
-
-% Encoding: UTF-8
-
-@Misc{2020-NaaktgeborenC+AndradeFN-BravLatNam-engrXiv-rev00,
-  author    = {Naaktgeboren, C. and de Andrade, F. N.},
-  title     = {{B}ravais lattice naming schemes for lattice-{B}oltzmann methods},
-  note      = {To appear soon.},
-  publisher = {engrXiv},
-}
-
-@Comment{jabref-meta: databaseType:bibtex;}
 
