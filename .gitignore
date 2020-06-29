@@ -16,6 +16,9 @@ fig/*pdf
 # The submission directory
 submission
 
+# Other
+wc.tex
+
 ## My own edits above this line
 
 ## Core latex/pdflatex auxiliary files:
