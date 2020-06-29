@@ -1,0 +1,530 @@
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                          Title Page                                                          %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\thispagestyle{empty} % Removes page numbering from the first page
+\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+
+
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           License                                                            %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\section*{License}
+
+    \scriptsize\noindent%
+    \begin{minipage}{\columnwidth}
+        \centering\tt
+        \includegraphics[height=6.0mm]{cc/by.pdf}\\[0.5\smallskipamount]
+        {\scriptsize\url{https://creativecommons.org/licenses/by/4.0/}}
+    \end{minipage}
+    \normalsize
+
+
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                      Table Of Contents                                                       %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\tableofcontents
+
+
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                         Introduction                                                         %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\section{Introduction}
+
+    Historically,   the   lattice-Boltzmann   (LB)    method    had    its    origins    in    the    frame    of    Lattice-Gas
+    Automata~\cite{1988-McNamaraGR+ZanettiG-PhysRevLett},     and     has     been     intensely     developed     since     its
+    inception~\cite{1992-BenziR+VergassolaM-PhysRep,       1998-ChenS+DoolenGD-AnnuRevFluidMech,        2011-MohamadAA-Springer,
+    2018-KrugerT+ViggenEM-Springer}. One important conceptual and  implementation  parameter  of  LB  methods  is  the  employed
+    \emph{lattice    stencil}---understood    as    the    lattice    geometry,    velocity    set,    weights,    and     scale
+    parameters~\cite{2013-HegeleJr+PhilippiPC-JSciComput,                                2013-MattilaKK+PhilippiPC-IntJModPhysC,
+    2014-MattilaKK+PhilippiPC-SciWorldJ}, although some authors may include  in  the  stencil  designation  additional  modeling
+    elements, such as the relaxation time scheme~\cite{2017-LiL+KlausnerJF-IntJHeatMassTran}.
+
+    Both LB and LGA methods can be implemented on a variety of lattices, and historically many such lattices (along  with  their
+    corresponding names or naming systems) have been developed. This work presents a LB literature  survey  focused  on  lattice
+    naming schemes, or model nomenclature systems, from its Lattice-Gas Automata (LGA)  predecessor  method  until  the  present
+    time, in a somewhat chronological timeline.
+
+
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                 Lattice Nomenclature Survey                                                  %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\section{Lattice Nomenclature Survey}
+
+    %---------------------------------------------------------------------------------------------------------------------------
+    \subsection{Lattice-Gas Automata Lattice Designations}
+
+    Some  LGA  lattices   were   named   with   \emph{ac\-ro\-nyms}   after   its   first   proposers,   such   as   the   `HPP'
+    one~\cite{1986-FrischU+PomeauY-PhysRevLett},  after  Hardy,  de  Pazzis,   and   Pomeau~\cite{1973-HardyJ+PazzisO-JMathPhys,
+    1976-HardyJ+PomeauY-PhysRevA,  1987-SucciS-JPhysAMathGen},  or  geometry-based  \emph{ac\-ro\-nyms},  such  as   the   `HLG'
+    one~\cite{1986-FrischU+PomeauY-PhysRevLett}, which stands for `hexagonal lattice gas,' later on referred  to  as  the  `FHP'
+    one~\cite{1987-FrischU+RivetJP-ComplexSyst,  1987-SucciS-JPhysAMathGen},  after  Frisch,  Hasslacher,  and  Pomeau.  Another
+    geometry-based  lattice  of  the  time  is  the  `FCHC'  one~\cite{1987-FrischU+RivetJP-ComplexSyst},   which   stands   for
+    `face-centered-hypercubic' model, due to d'Hu\-mi\-è\-res, Lallemand, and Frisch.
+
+    Later on designations such as `FHP + 3 rest particles' and `FCHC + 3 rest particles' also appeared~\cite{1991-BoonJP-PhysD},
+    as   well   as   suffixes   such   as   `-I',   `-III',   and    `-IV'    after    `FHP',    for    alternative    collision
+    rules~\cite{1991-AppertC+ZaleskiS-PhysD, 1991-BoonJP-PhysD, 1991-ChenS+RoseH-PhysD}.
+
+
+    %---------------------------------------------------------------------------------------------------------------------------
+    \subsection{Early Lattice-Boltzmann Years}
+
+
+    \vspace{2.0mm}\noindent\textbf{Inception Period:}\vspace{1.0mm}
+
+    LB   methods   adhered    to    LGA    lattice    nomenclature    in    its    inception    period,    as    witnessed    by
+    reference~\cite{1988-McNamaraGR+ZanettiG-PhysRevLett}          in          1988          and          by          subsequent
+    references~\cite{1989-HigueraFJ+JimenezJ-EuroPhysLett,         1989-HigueraFJ+SucciS-EuroPhysLett}         in          1989,
+    by~\cite{1990-BenziR+VergassolaM-EuroPhysLett,   1990-BenziR+VergassolaM-NuclPhysB,    1990-CancelliereA+SucciS-PhysFluidsA,
+    1990-VergassolaM+SucciS-EuroPhysLett}   in   1990,   and   by~\cite{1991-CornubertR+LevermoreD-PhysD,    1991-ErnstMH-PhysD,
+    1991-FrischU-PhysD, 1991-GunstensenAK+ZanettiG-PhysRevA, 1991-SucciS+BenziR-PhysRevA} in 1991, to cite a few.
+
+
+    \vspace{2.0mm}\noindent\textbf{Early 1990's:}\vspace{1.0mm}
+
+    It seems that Qian~\cite{1990-QianYH-Paris} (apud~\cite[p.~235]{1993-QianYH-JSciComput}) was the one to introduce, in  1990,
+    the `DdQb' lattice naming scheme for LB methods---in which $d$ is the lattice \emph{Euclidean dimensionality} and $b$ is the
+    lattice  \emph{velocity   count},   as   in   D1Q3,   D2Q9,   and   D3Q15,   etc.~\cite{1992-QianYH+LallemandP-EuroPhysLett,
+    1993-QianYH+OrszagSA-EuroPhysLett}---that seems to be the most prevalent lattice naming system  to  date,  although  notable
+    exceptions appear long after the paper~\cite{1991-QianYH+LallemandP-AdvKinTheoContMech} came out in 1991.
+
+    As far as increasing lattice velocity counts go, the relationship between mesoscopic lattice \emph{symmetry}  and  resulting
+    macroscopic   description   \emph{isotropy}   has   been   established    from    early    in    the    history    of    LGA
+    methods~\cite{1973-HardyJ+PazzisO-JMathPhys, 1976-HardyJ+PomeauY-PhysRevA},  in  two~\cite{1986-FrischU+PomeauY-PhysRevLett}
+    and in three Euclidean dimensions, the latter requiring the lattice to include links beyond nearest neighbors~\cite[pp.~473,
+    490]{1986-WolframS-JStatPhys}, hence particle velocities with unequal magnitudes.
+
+    Moreover, Koelman~\cite{1991-KoelmanJMVA-EuroPhysLett} had proposed matching discrete velocity moments up to a certain order
+    $n$ with the $d$-dimensional continuous Boltzmann distribution, since only those  moments  influence  the  macroscopic  flow
+    behavior; such procedure would yield values for lattice velocity \emph{weights} $W_{\alpha}$.  The  proposed  criteria  were
+    deemed more stringent than previously well-known symmetry  and  isotropy  requirements  from~\cite{1986-WolframS-JStatPhys},
+    since it not only led to an isotropic macroscopic description, but also ensure  pressure  term  independence  from  velocity
+    terms of the Navier-Stokes description. Furthermore, a skewed rectangular 9-speed lattice with independent $a$ and $b$  axis
+    lengths was proposed\footnote{That lattice was named `face-centered rectangular' by  the  author.},  whose  weights  exactly
+    recover those of the well-known D2Q9 lattice for $a = b$, over which the argument that valid weights `[...] \emph{can always
+    be found by choosing a large enough set of} (lattice) \emph{velocity vectors\/} [...]'~\cite{1991-KoelmanJMVA-EuroPhysLett}.
+
+    One    driving    application     for     increased     velocity     count     lattices     is     thermal     flows.     On
+    reference~\cite{1993-AlexanderFJ+SterlingJD-PhysRevE} an \emph{unnamed}  2D,  hexagonal  (triangular),  13-velocity  lattice
+    having velocity magnitudes of 0,  1,  and  2  lattice  units~\cite{1998-ChenS+DoolenGD-AnnuRevFluidMech}  was  employed  for
+    adiabatic sound propagation and heat transfer Couette flow, whose results were shown to be in agreement  with  corresponding
+    analytical solutions.
+
+    Some `nDmV' lattices, with $n$ being the Euclidean space dimension and $m$ the lattice velocity count, namely, 1D5V,  2D16V,
+    and 3D40V, were introduced in~\cite{1994-ChenY+AkiyamaM-PhysRevE} for  shock  wave  front  structure  and  shear  wave  flow
+    application cases. The 2D16V lattice, for instance, was said to  be  comprised  of  four  \emph{sublattices}---a  term  that
+    appeared in subsequent references---with each sublattice having 4 discrete velocities of same magnitude and forming adjacent
+    right angles, which led to possibly \emph{multiple sublattices per lattice energy level} $\epsilon \equiv 2e  =  c^2$,  with
+    $c$ being the microscopic (lattice) velocity magnitude, and $e$ the corresponding specific kinetic energy, as was  the  case
+    with the $\epsilon = 1^2 + 2^2 = 5$ energy level of a square lattice, represented by the 8 discrete velocities obtained from
+    permutations of ($\pm\{1,2\}$, $\pm\{2,1\}$) in lattice units, which were grouped in two distinct sublattices.  This  is  in
+    contrast to later works in which energy levels are treated as single groups.
+
+
+    \vspace{2.0mm}\noindent\textbf{Late 1990's to mid-2000's:}\vspace{1.0mm}
+
+    Most likely borrowing from mesh-based continuous mechanics numerical methods, a study~\cite{1996-HeX+DemboM-JComputPhys} has
+    proposed a LB algorithm for non-uniform mesh grids, by decoupling spatial and  momentum  space  discretizations  in  the  LB
+    scheme. The underlying momentum space discretization was the well-known D2Q9 lattice, referred to in the study as `9-bit BGK
+    model  in  2D  space'  and  other  semantically  equivalent  sentences,  in  which   BGK   stands   for   kinetic   theory's
+    Bhatnagar-Gross-Krook  collision  model  for  the   continuous   Boltzmann   equation~\cite{1954-BhatnagarPL+KrookM-PhysRev,
+    2003-LiboffRL-bookSpringer, 2011-HarrisS-Dover}.
+
+    Nine years after the debut of LB methods, a study~\cite{1997-HeX+LuoLS-PhysRevE} showed that they could be directly  derived
+    from    the    continuous    Boltzmann    equation    with    linearized    collision     operator     under     the     BGK
+    approximation~\cite{2011-HarrisS-Dover}, while lattice stencils  from  requirements  of  matching  continuous  and  discrete
+    velocity moments up to a desired order---a decisive publication, not only in making LB methods theory independent  from  its
+    LGA historical predecessor, but also to pave the way towards later methods for lattice weights determination for the lattice
+    velocity     set     based     on      some      discrete-to-continuous      equivalences~\cite{2006-ShanX+ChenH-JFluidMech,
+    2006-PhilippiPC+SurmasR-PhysRevE}.  The  lattices  in~\cite{1997-HeX+LuoLS-PhysRevE}   were   verbosely   referred   to   as
+    `$d$-dimensional $b$-bit $g$ lattice model', with $d$ being the Euclidean space dimension, $b$ the lattice  velocity  count,
+    and $g$ a geometry term, such as `triangular,' etc.
+
+    A review article by Shen and  Doolen~\cite{1998-ChenS+DoolenGD-AnnuRevFluidMech}  published  a  decade  after  McNamara  and
+    Zanetti's premiere LB publication~\cite{1988-McNamaraGR+ZanettiG-PhysRevLett} and seven years after Qian's paper introducing
+    the now-prevailing `DdQb' lattice naming scheme~\cite{1991-QianYH+LallemandP-AdvKinTheoContMech}, would still  refer  to  LB
+    lattices either with LGA-style or verbose nomenclatures, and to overall LB schemes based on its  collision  term  treatment,
+    such as `lattice BGK (LBGK)' models.
+
+    Higher-order lattices were proposed  in~\cite{1998-PavloP+VahalaL-PhysRevLett}  for  two-  and  three-dimensional  Euclidean
+    spaces. They were referred to as `octagonal grid (17-bit),' and as `3D ``octagonal'' 53-bit' models, respectively, and  were
+    isotropic up to the sixth-order. Since octagons are not space-filling, plane-tiling geometries, the proposed  lattices  were
+    not of the Bravais type, meaning they impose a decoupling between the spatial and the  momentum  space  discretizations,  as
+    with the non-uniform mesh~\cite{1996-HeX+DemboM-JComputPhys}, and the method has to  resort  to  interpolations,  which  was
+    later shown to cause spurious numerical diffusion~\cite[p.~429]{2006-ShanX+ChenH-JFluidMech}.
+
+    Other     lattice     namings     of     the     early-     and     mid-2000's     include     verbose,     spelled      out
+    ones~\cite{2001-dHumieresD+LallemandP-PhysRevE,   2005-LuXY-IntJModPhysC};   a   `$D_dQ_b$'   variant   of   Qian's   `DdQb'
+    scheme~\cite{2003-NourgalievRR+JosephD-IntJMulFlow};     a     `groupI'     to     `groupIV'     regular     2D      polygon
+    variant~\cite{2003-WatariM+TsutaharaM-PhysRevE, 2007-WatariM-PhysA}; a `$b$  ($d$D)'  short  designation  for  an  otherwise
+    verbose one~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett}; an explicit lattice units velocity list, such as `$\{0, \pm  1,
+    \pm 3\}$', in~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett}; and the `dodecahedron' and `icosahedron' ones that were shown
+    to be stable for supersonic thermal flows~\cite{2006-WatariM+TsutaharaM-PhysA, 2007-WatariM-PhysA}.
+
+
+    %---------------------------------------------------------------------------------------------------------------------------
+    \subsection{The Year of 2006}
+
+    The year of 2006 is seemingly a landmark for multi-velocity, higher-order LB schemes---and incidentally for  lattice  naming
+    schemes---as evidenced by the appearance of three key publications, namely those of  Shan,~X.,  Yuan,~X.-F.,  and  Chen,~H.,
+    \cite{2006-ShanX+ChenH-JFluidMech},   of   Philippi,~P.~C.,   Hegele,~L.~A.,   dos    Santos,~L.~O.~E.    and    Surmas,~R.,
+    \cite{2006-PhilippiPC+SurmasR-PhysRevE},        and        of         Chikatamarla,~S.~S.         and         Karlin,~I.~V.,
+    \cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett}.
+
+
+    \vspace{2.0mm}\noindent\textbf{Shan and Coauthors:}\vspace{1.0mm}
+
+    A  systematic   discretization   framework   for   the   Boltzmann   equation   was   proposed   by   Shan   and   coauthors
+    in~\cite{2006-ShanX+ChenH-JFluidMech}.  From  kinetic  theory~\cite{2011-HarrisS-Dover,   2003-LiboffRL-bookSpringer},   the
+    authors pointed out  that  successive  Chapman-Enskog  approximations  of  the  Boltzmann  equation  obtain  the  (i)~Euler,
+    (ii)~Navier-Stokes, (iii)~Burnett, and (iv)~high\-er-or\-der macroscopic equations---meaning progressively  high\-er-or\-der
+    moments  of  the  continuous  Boltzmann  equation  express  progressively  high\-er-or\-der  macroscopic  thermohydrodynamic
+    descriptions. Moreover, the authors demonstrated that projecting the Boltzmann equation onto order-$N$  truncated  tensorial
+    Hermite polynomial expansion bases~\cite{1949-GradH-CommPureApplMath}, lead  to  discrete  LB  models  of  corres\-pon\-ding
+    order-$N$ moments, since resulting Hermite expansion coefficients correspond to the velocity moments up to the chosen order.
+
+    In this discretization framework, the lattice is viewed as a Hermite expansion \emph{quadrature}, and the naming  convention
+    was defined in terms of three parameters, namely, an Euclidean space dimension $D$, a quadrature velocity count $d$, and  an
+    algebraic degree of precision $n$ encoded in an `$E_{D,n}^{d}$' naming scheme---an order-$N$ Hermite  expansion  requires  a
+    quadrature degree $n \geqslant 2N$. Citing Qian  and  coauthors'  lattices~\cite{1992-QianYH+LallemandP-EuroPhysLett},  they
+    established the following comparisons, which were off only by a scaling factor: $D2Q9 \propto E_{2,5}^{9}$,  $D3Q15  \propto
+    E_{3,5}^{15}$, and $D3Q19 \propto E_{3,5}^{19}$.
+
+    Additionally, they established that Gauss-Hermite quadratures of the Boltzmann equation yield LB models  with  \emph{minimum
+    velocity count} for a given degree of precision and Euclidean spacial dimension, without, however, the ability to  predefine
+    (choose) the discrete velocity abscisae,  which  apart  from  special  cases  fails  to  produce  a  space-filling,  Bravais
+    lattice---recalling that for LB methods, this means lower memory requirements but decoupled spatial  and  momentum  `meshes'
+    that require interpolations, thus introducing artifacts such as spurious numerical diffusion.
+
+    In the  Appendix  of  reference~\cite{2006-ShanX+ChenH-JFluidMech},  the  authors  include  a  brief  overview  on  deriving
+    quadratures on predefined Cartesian abscissae, which is  the  main  requirement  for  space-filling,  Bravais  lattices  for
+    non-interpolating, exact advection LB schemes. The brief overview, however, is of scalar nature, while a tensorial treatment
+    is needed for full clarity. Results for the space-filling $E_{2,7}^{17}$ and $E_{3,7}^{39}$ quadratures  were  listed  among
+    the ones obtained with Gauss-Hermite quadratures.
+
+    % Missing details include (i) how to switch from rank-0 polynomial base to the tensorial Hermite one, (ii) and from scalar
+    % argument ξ to a vectorial 𝛏 one.
+
+
+    \vspace{2.0mm}\noindent\textbf{Philippi and Coauthors:}\vspace{1.0mm}
+
+    Tackling the aspects associated in deriving space-filling, Bravais  lattices  aiming  at  sufficiently  high  orders  as  to
+    approach thermal  hydrodynamic  transport  problems,  Philippi  and  coauthors~\cite{2006-PhilippiPC+SurmasR-PhysRevE}  have
+    proposed a new \emph{Method of Prescribed Abscissas\/}, MPA, for obtaining lattice weight values  and  scaling  factor  from
+    predefined lattice arrangements.
+
+    Departing from the continuous Boltzmann equation, the derivation of discrete velocity sets, i.e., the lattice  vectors,  and
+    corresponding weights, was considered as a quadrature problem aiming at (i)~matching discrete equilibrium mass  distribution
+    function with its continuous counterpart and at (ii)~warranting  even-ranked  velocity  tensor  isotropy,  which,  in  turn,
+    translates into isotropic fluid transport properties.
+
+    The Method of Prescribed Abscissas, MPA, yields \emph{implicit} equations for lattice weights and lattice  scale  factor  in
+    the form of polynomial tensor products, which are generally excessively numerous, especially for  higher-order  cases.  They
+    have to be selected (reduced) and converted either into a non-linear system of equations. The apparent  lack  of  literature
+    guidance   in    tensor    component    equation    selection    criteria    and    solution    approach    has    motivated
+    works~\cite{2016-AndradeFN-MEngUTFPR, 2019-daRosaTG-MEngUTFPR}.
+
+    In their prescribed abscissas quadrature discussion, authors state that~\cite[p.~6]{2006-PhilippiPC+SurmasR-PhysRevE}:
+    %
+    \begin{quote}
+        \swshape
+        ``[...]~$N$th-order approximation to the [Maxwell-Boltzmann]  equilibrium  distribution  is  required  when  $N$th-order
+        macroscopic equilibrium moments are to be correctly described in [lattice-Boltzmann methods,]''
+    \end{quote}
+    %
+    \noindent which is homologous to many Shan and  coauthor's  statements  in~\cite{2006-ShanX+ChenH-JFluidMech}.  Observations
+    like these, allied to the new and consistent methods of deriving higher-order LB stencils  by  Gauss-Hermite  or  Prescribed
+    Abscissas quadratures, allowed for the immediate and subsequent appearances of lattices in 2D- and  in  3D-Euclidean  spaces
+    with increased velocity counts, many of which requiring changes or adaptations in the naming scheme, as  the  sequence  will
+    show.
+
+    Immediate examples~\cite{2006-PhilippiPC+SurmasR-PhysRevE} include (i)~\emph{two} forms of bidimensional, 17-velocity  ones,
+    named D2Q17 and D2V17 for distinction; (ii)~a D2Q21 one; as well as (iii)~\emph{two}  forms  of  bidimensional,  25-velocity
+    ones, named D2V25(W1) and D2V25(W6), containing the energy levels $\epsilon \in \{0,$ $2,$ $4,$ $8,$ $9,$ $16,$ $18\}$,  and
+    $\epsilon \in \{0,$ $1,$ $2,$ $4,$ $8,$ $9,$ $16\}$, respectively---thus without the energy levels (hence, weights)  labeled
+    `1' and `6' for `(W1)' and `(W6)', respectively---and (iv)~a  fourth-order  ($N=4$)  Hermite  D2V37  lattice,  suitable  for
+    thermal flow LB simulations.
+
+
+    \vspace{2.0mm}\noindent\textbf{Chikatamarla and Karlin:}\vspace{1.0mm}
+
+    Seeking  to  systematically   derive   \emph{stable}   and   \emph{Galilean   invariant}   LB   models,   Chikatamarla   and
+    Karlin~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett} set about the problem of LB stencil construction from a discrete form
+    of Boltzmann's H-theorem---in which the  $(-H)$  quantity  represents  a  sort  of  generalized  thermodynamic  entropy  for
+    non-equilibrium states in the Boltzmann Gas Limit (BGL) that increases according to the second law of  thermodynamics  until
+    equilibrium is reached~\cite{2011-HarrisS-Dover}. By maximizing the  entropy,  i.e.,  by  minimizing  $H$  in  the  discrete
+    description,%
+    %
+    \begin{equation}
+        H = \sum_{i=1}^{N}f_i\ln\left(\frac{f_i}{W_i}\right),
+    \end{equation}
+    %
+    \noindent with appropriately chosen weights $W_i$ under a set of macroscopic constraints of mass and energy conservation  as
+    well as constitutive relations for higher-order macroscopic tensors, authors arrived at \emph{explicit} expressions for  the
+    weights $W_i$ and for the stencil reference temperature for several one-dimensional  lattice  models  having  from  3  to  5
+    velocities. Methods obtained by this systematic were named `entropic' LB methods (ELBM).
+
+    Remarkably, due to a pattern in Gauss-Hermite  quadrature~\cite{2003-AnsumaliS+OettingerHC-EuroPhysLett},  Chikatamarla  and
+    Karlin       proposed       a       straightforward       way       of       obtaining       higher-dimension        lattice
+    stencils~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett}:
+
+    \begin{quote}
+        \swshape
+        ``[...]~discrete velocities [$\mathbf{c}_i$] in the $D$-dimensional case are  tensor  products  of  $D$  copies  of  the
+        one-dimensional velocities, whereas the corresponding weights  [$W_i$]  are  algebraic  products  of  the  corresponding
+        weights in one dimension.''
+    \end{quote}
+
+    As the immediate examples of~\cite{2006-PhilippiPC+SurmasR-PhysRevE} evidence, as soon as one allows for  including  several
+    energy levels (but not necessarily all, nor in monotonic order) in a Bravais lattice,  velocity  count  no  longer  uniquely
+    identifies lattices, and thus, \emph{velocity count-based lattice naming schemes are  bound  to  be  ambiguous  and  require
+    additional information as to uniquely identify the lattice.\/} Usually, the additional information is laying out  \emph{all}
+    velocity vectors, whether by energy level listings, a quiver-like lattice picture, or  tabulated  lattice  velocities  (plus
+    weights, and either scaling factor or reference temperature)---all of which seem, to varying degrees, excessively wordy  and
+    lengthy. Moreover, the very need for providing additional information as to uniquely identify an already named lattice seems
+    to defeat the purpose of naming it, at least in part.
+
+
+    %---------------------------------------------------------------------------------------------------------------------------
+    \subsection{Higher-order lattice proliferation}
+
+
+    \vspace{2.0mm}\noindent\textbf{Late 2000's:}\vspace{1.0mm}
+
+    The onset of systematic techniques  for  LB  stencils  fabrication  in  2006~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett,
+    2006-PhilippiPC+SurmasR-PhysRevE, 2006-ShanX+ChenH-JFluidMech}, allied to the expansion of LB  simulation  applications  and
+    domains, contributed to the proliferation of LB stencils over the following years. This further highlighted the  ambiguities
+    in velocity count-based naming schemes, as well as prompted the appearance of further lattice naming variety.
+
+    The  following  `DdVb'  lattices   were   derived   by   Ortiz~\cite{2007-OrtizCEP-DrUFSC},   using   prescribed   abscissas
+    quadrature~\cite{2006-PhilippiPC+SurmasR-PhysRevE}: second-order hexagonally regular (Bravais) D2V7; third-order  irregular,
+    i.e., not space-filling, D2V12; fourth-order irregular D2V19, D2V20, D2V21, and regular D2V37; fifth-order irregular D2V28a,
+    D2V28b, and regular D2V53a and D2V53b; sixth-order regular D2V81.  In  three-dimensional  Euclidean  space,  the  following:
+    second-order irregular D3V13, third-order irregular D3V27, and fourth-order irregular D3V52 and D3V53.
+
+    The D2V37, D2V53 and D2V81 lattices appear on~\cite{2007-PhilippiPC+DosSantosLOE-IntJModPhysC}. Analytically  derived  exact
+    weights and scale factors for the D2V17 and D2V37 lattices are reported in~\cite{2007-SiebertDN+PhilippiPC-IntJModPhysC}.
+
+    A `59-velocity model in three dimensions' is said to be of third order Hermite expansion, with sixth-order  tensor  isotropy
+    in~\cite{2008-ChenH+ShanX-PhysD}; however, no weights, velocity  list  nor  scaling  factors  of  such  lattice  are  given.
+    One-dimensional  D1Q3,  D1Q4,  D1Q5,  and  D1Q6,  as  well  as  two-dimensional  D2Q12  and  D2Q21  lattices  are  presented
+    in~\cite{2008-KimSH+BoydID-JComputPhys},      with      finite      Knudsen      number      applications      in      view.
+    Reference~\cite{2008-RubinsteinR+LuoLS-PhysRev} studies various two- and three-dimensional lattices of up to 51  velocities,
+    while referring to a `DdQq' notation as being `standard'.
+
+    On patent~\cite{2008-ShanX+ZhangR-USPat}, authors designate Cartesian,  space-filling  models  with  21,  37,  39,  and  103
+    velocities, as `2D-1', `2D-2', `3D-1', and `3D-2', respectively.
+
+    Discussion on a plurality of lattices and  lattice  operations,  such  as  stretching,  extending  (product),  pruning,  and
+    superimposing, takes place in~\cite{2009-ChikatamarlaSS+KarlinIV-PhysRevE}; noteworthy ones are the  D$1$Q$(1+2k)$  lattices
+    for $k \in \{1, \ldots, 4\}$, the higher-order ones also referred to `1D seven/nine velocity set'; the `ZOT', i.e.,  `\{$0$,
+    $\pm 1$, $\pm 3$\}', or  `zero-one-three'  1-D  lattice;  the  `D1Q5-ZOT  lattice',  defined  as  ``{\swshape  the  shortest
+    integer-valued        discrete        velocity        set        in        the        family        of         five-velocity
+    sets\/}''~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett};                          the                          `D2Q25-ZOT'
+    lattice~\cite{2008-ChikatamarlaSS+KarlinIV-CompPhysComm}, of eight-order isotropy,  obtained  by  extending  the  `D1Q5-ZOT'
+    through a tensor product with itself, so that%
+    %
+    \begin{equation}
+        D2Q25\mbox{-ZOT} \equiv (D1Q5\mbox{-ZOT}) \otimes (D1Q5\mbox{-ZOT});
+    \end{equation}
+    %
+    \noindent the `D3Q125-ZOT lattice', also of eight-order iso\-tro\-py, obtained by extending either  the  `D1Q5-ZOT'  or  the
+    `D2Q25-ZOT' lattice through a tensor product between them, so that%
+    %
+    \begin{equation}
+        D3Q125\mbox{-ZOT} \equiv (D2Q25\mbox{-ZOT}) \otimes (D1Q5\mbox{-ZOT});
+    \end{equation}
+    %
+    \noindent and also it's pruned version `D3Q41-ZOT', obtained by pruning, or, symmetrically removing velocity subsets.
+
+    It is worth noting that pruning operations deal with discrete  velocity  groups  of  \emph{same  magnitude};  hence,  energy
+    levels---so that pruning remove entire energy levels from a departure lattice configuration.
+
+    Several lattice stencils are  given  in~\cite{2009-SurmasR+PhilippiPC-EurPhysJSpecialTopics}  \emph{mostly}  in  the  `DdVb'
+    naming scheme from~\cite{2006-PhilippiPC+SurmasR-PhysRevE}, but also including an `n'  suffix,  as  in  D1V9n,  D2V28n,  and
+    D3V53n, as to indicate the lattice is not space-filling, and also in the `\{$0$, $\pm a$, $\pm b$\}' format,  in  which  $b$
+    can be an explicit multiple of $a$, as in \{$0$, $\pm a$, $\pm 3a$\}, naming schemes.  Bravais  lattices  are  given  up  to
+    D1V15, D2V53, and D3V107 in one-, two-, and three- Euclidean spacial dimensions. Appendix tables list full velocity sets  as
+    the `DdVb[n]' naming scheme, in which the `n' suffix is optional, is not uniquely determined.
+
+
+    \vspace{2.0mm}\noindent\textbf{From 2010 to 2020:}\vspace{1.0mm}
+
+    The      following      lattices      are      referenced      in       the       following       works:       a       D2Q36
+    in~\cite[p.~452]{2010-AidunCK+ClausenJR-AnnuRevFluidMech}; a different D2V25,  D2V33,  D2V29-\{l,  r,  rl\},  D3V39,  D2V45,
+    D2V77, rectangular D2Q13R, hexagonal D2V19H (also referred to as `GBL', after Grosfils, Boon and Lallemand), D2V55H, D2V85H,
+    and D2V115H, the last three of fifth, sixth, and seventh order, respectively, and D3V107 in~\cite{2010-HegeleLA-DrUFSC};  an
+    unnamed  one,  described  as   `a   ninth-order   accurate   Gauss-Hermite   quadrature   formula   in   three   dimensions'
+    in~\cite{2008-NieX+ChenH-PhysRevE} having 121 velocities in three-dimensional Euclidean space.
+
+    Spherical shell `SLB$(N; K, L, M)$' lattices---of order $N$,  $K$  spherical  shells,  $L$  shell  latitudes,  each  $K$-$L$
+    intersection circle with $M$ uniformly distributed  discrete  velocities,  so  that  models  have  $K  \times  L  \times  M$
+    velocities---with $1 \leqslant N \leqslant  7$,  $K,  L  >  N$,  and  $M  >  2N$,  i.e.,  SLB(1;~2,~2,~3),  SLB(2;~3,~3,~5),
+    SLB(3;~4,~4,~7), SLB(4;~5,~5,~9), and so  on  up  to  SLB(7;  8,  8,  15),  and  even  an  SLB(N;  20,  20,  17)  are  given
+    in~\cite{2012-AmbrusVE+SofoneaV-PhysRevE}, the last ones having, respectively, 960 and 6800 velocities!
+
+    Rhombic     D2Q9,     rectangular     D2R11,     and     orthorhombic     Bravais     D3R23     lattices      are      found
+    in~\cite{2013-HegeleJr+PhilippiPC-JSciComput}.
+
+    Mattila  and  coauthors~\cite{2013-MattilaKK+PhilippiPC-IntJModPhysC}  have  shown  that  spurious  currents  emerge   along
+    liquid-vapor interface in multiphase simulations. They have shown that  higher-order  stencils,  such  as  the  fourth-order
+    D2V37, yields more localized and isotropic spurious currents than lower order ones, such as third-order D2V17 and  D2Q25-ZOT
+    ones.    Thus,    multiphase    flows    became    another    application    requiring    multi-speed,    higher-order    LB
+    methods~\cite{2014-SiebertDN+MattilaKK-PhysRevE}.       In        fact,        shortly        after,        the        group
+    published~\cite{2014-MattilaKK+PhilippiPC-SciWorldJ} pre\-scribed ab\-scis\-sas-de\-rived D2V81 and D2V141  lattices,  along
+    with an equivalent, however far simpler, form of the prescribed abscissas method in their Section~2.
+
+    Reference~\cite{2014-MengJ+ZhangY-JComputPhys} lists lattice  velocities,  weights  and  scaling  factor  for  D2Q16,  D2Q17
+    (reference~\cite{2007-SiebertDN+PhilippiPC-IntJModPhysC}'s D2V17 and reference~\cite{2010-ShanX-PhysRevE}'s $E_{2,7}^{17}$),
+    D2Q37   (reference~\cite{2006-PhilippiPC+SurmasR-PhysRevE}'s   D2V37),   and   for   a   D3Q121,   originally   unnamed   on
+    reference~\cite{2008-NieX+ChenH-PhysRevE}. Situations like this---in which a given lattice is referred to by different names
+    in different sources yet without ruling out ambiguities---illustrate the need for improved lattice naming schemes.
+
+    The `D$d$Q$b^d$' notation---as in D$3$Q$5^3$, D$2$Q$7^2$, D$3$Q$7^3$, and D$3$Q$11^3$---with  a  more  explicit  origin  and
+    relationship with a lower-dimensionality, entropic `D$1$Q$b$' lattice of $b$ velocities, through  tensor  product  extension
+    from         it~\cite{2006-ChikatamarlaSS+KarlinIV-PhysRevLett}---appears         in~\cite{2015-FrapolliN+KarlinIV-PhysRevE,
+    2016-FrapolliN+KarlinIV-PhysRevE} in connection to compressible flow applications. In this scheme, if%
+    %
+    \begin{align}
+        (D1Qb)^d & \equiv \;\underbrace{(D1Qb) \otimes (D1Qb) \ldots}_{\mbox{($d$ times)}}\;\mbox{, then} \\
+        DdQb^d   & \equiv (D1Qb)^d.
+    \end{align}
+    %
+    It is worth noting that the D$3$Q$7^3$ and D$3$Q$11^3$ lattices have 343 and 1331 velocities, respectively.
+
+    Supersonic and hypersonic flow speeds are comparable to and greater than molecular thermal  velocity  scales,  respectively;
+    moreover, many supersonic flows have a well defined prevailing flow direction, especially when simple, slender objects  move
+    with high speeds through quiescent media. Changing from a rest to the object's  reference  frame  causes  molecule  velocity
+    populations   to   be    shifted    by    the    object's    speed.    References~\cite{2016-FrapolliN+KarlinIV-PhysRevLett,
+    2020-FrapolliN+KarlinIV-Entropy} present the $D2Q7^2$ lattice, i.e.,  a  D2Q49  one,  in  the  (i)~symmetric  variety,  rest
+    reference frame, and (ii)~shifted variety, comoving reference frame  of  $U_x  =  1$  lattice  units.  Better  yet,  authors
+    demonstrate that departing from a Galilean-invariant symmetric, rest  reference  frame  lattice,  reference-frame  shiftings
+    \emph{do not change} the lattice weights, meaning%
+    %
+    \begin{equation}
+        W_i(U, T) = W_i(0, T),
+    \end{equation}
+    %
+    \noindent for arbitrary $U$, where $W_i$'s are the lattice weights in terms of the lattice reference speed and  temperature,
+    and $U$ is the reference frame speed shifting. Better still, the Galilean invariance property allow for the construction  of
+    higher-order lattices through tensor products of lower-order Galilean invariant ones, whether they are shifted or not.
+
+    Therefore, let a symmetrical $D1Q7$ lattice, with velocity abscissas $V_7 = \{-3,$ $-2,$  $-1,$  $0,$  $+1,$  $+2,$  $+3\}$,
+    produce a unit $U_x$-shifted lattice with velocity abscissas $V_7' = \{-2,$ $-1,$ $0,$ $+1,$ $+2,$ $+3,$  $+4\}$,  then  the
+    velocity set of the unit $U_x$-shifted $D2Q7^2$ lattice is given by $V_{7x}' \otimes V_{7y}$.
+
+    Body-centered cubic, BCC, lattice arrangements arising from emphasizing spatial discretization over the momentum one in  the
+    discretization of the Boltzmann equation in~\cite{2016-NamburiM+AnsumaliS-SciRep} led to  BCC  lattices  named  `RD3Q27'.  A
+    novel    BCC    lattice    model    named    RD3Q67    is     also     proposed     in~\cite{2018-AtifM+AnsumaliS-PhysRevE}.
+    Reference~\cite{2017-LiL+KlausnerJF-IntJHeatMassTran} adds capital roman numerals to  `DdQb'  lattices  depending  on  their
+    underlying relaxation time scheme in Multiple Relaxation Time, MRT, models, thus yielding D2Q9-I to  D2Q9-IV  lattice  model
+    designations.
+
+    Velocity count-based lattice naming ambiguities arose in~\cite{2017-PengY+ZhangJM-MathProblEng}, in which the different  yet
+    homonymous            `D1Q5'            lattices            from            references~\cite{1998-QianYH+ZhouY-EuroPhysLett,
+    2006-ChikatamarlaSS+KarlinIV-PhysRevLett}---one with $\{0,$ $\pm 1,$ $\pm 2\}$, and the other with $\{0,$ $\pm 1,$ $\pm 3\}$
+    velocity sets---were distinguished by an `A' or `B' suffix, making them D1Q5A and D1Q5B.
+
+    Finally, a space-filling regular Bravais D2V169 lattice, comprised of 169 velocity vectors, with corresponding  weights  and
+    scaling factor appears in~\cite[p.~68]{2019-daRosaTG-MEngUTFPR}.
+
+
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                          Discussion                                                          %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\section{Discussion}
+
+    From the lattice naming systems survey of the previous Section, one finds that many lattice  naming  schemes  have  appeared
+    over the years, with each new variety either introduced as to accommodate or reflect a new aspect brought in  the  research,
+    as  with~\cite{2006-ShanX+ChenH-JFluidMech,   2008-ChikatamarlaSS+KarlinIV-CompPhysComm,   2006-PhilippiPC+SurmasR-PhysRevE,
+    2012-AmbrusVE+SofoneaV-PhysRevE, 2016-NamburiM+AnsumaliS-SciRep}, or to organize and distinguish multiple lattices within  a
+    publication,        as        with~\cite{1991-QianYH+LallemandP-AdvKinTheoContMech,        2006-PhilippiPC+SurmasR-PhysRevE,
+    2007-OrtizCEP-DrUFSC, 2014-MengJ+ZhangY-JComputPhys, 2017-LiL+KlausnerJF-IntJHeatMassTran}.
+
+    The present survey is unaware of any published effort in the direction of major  standardizations  across  multiple  lattice
+    types  and  features,  as  well  as  of  the  existence  of  any  concise  \emph{naming}\footnote{As  opposed  to   velocity
+    \emph{listing}.} system that would allow for uniqueness by ruling out name ambiguity.
+
+    Lattice naming variety appears to be due to (i)~the inherent decentralized nature of research, (ii)~the inherent novelty and
+    discovery associated to the practice of research, making future features,  ideas,  and  demands  unforeseeable  to  previous
+    studies, as well as to (iii)~the variety of lattice \emph{types}.
+
+    On this last aspect, the history of the method has  seen  (a)~space-filling,  regular,  Bravais  types  in  linear,  square,
+    triangular (hexagonal), cubic, and projected hypercubic geometries; (b)~irregular, non-space-filling ones;  (c)~those  based
+    on spherical coordinate systems; (d)~those with shifted reference velocity frame; and  (e)~those  more  heavily  focused  on
+    spatial space discretization rather than on momentum space. This facet alone may  at  best  difficult  efforts  in  creating
+    concise, unambiguous lattice naming schemes of general scope.
+
+    With respect to the continuation and adoption of lattice naming systems, the Euclidean dimension,  velocity  counting  based
+    `DdQb'    template    of    1990    due    to    Qian~\cite{1990-QianYH-Paris},    and    of    1991     of     Qian     and
+    coauthors~\cite{1991-QianYH+LallemandP-AdvKinTheoContMech} seems to be the closest thing to a present-time de-facto standard
+    for   LB   stencil   naming,   being   thus   acknowledged   on   research~\cite{2008-RubinsteinR+LuoLS-PhysRev}   and    on
+    review~\cite{2010-AidunCK+ClausenJR-AnnuRevFluidMech}   papers,   as   well   as    textbooks~\cite{2011-MohamadAA-Springer,
+    2018-KrugerT+ViggenEM-Springer}. Nonetheless, reaching this current status hasn't been a quick process, as it seemingly took
+    a considerable amount of years until the naming scheme became widely adopted in the LB literature, as evidenced by the  lack
+    of its usage in the 1998 review paper of Chen and coauthors, which refer to some of them as `LBM models based on 21  and  25
+    velocities'~\cite[p.~357]{1998-ChenS+DoolenGD-AnnuRevFluidMech}, and on the 2002 review paper by Succi and coauthors,  which
+    refer to Qian and coworkers' model as `LBGK'~\cite[p.~1215]{2002-SucciS+ChenH-RevModPhys} after the collision model.
+
+    Moreover,    other    naming    conventions    such    as    the     `$E_{D,n}^{d}$'     one     due     to     Shan     and
+    coworkers~\cite{2006-ShanX+ChenH-JFluidMech},       the       `DdVb'       one       due       to        Philippi        and
+    coworkers~\cite{2006-PhilippiPC+SurmasR-PhysRevE}, and the `DdQb'-based variations such as `-ZOT' suffix and  integer  power
+    velocity count ones due to Chikatamarla and Karlin~\cite{2008-ChikatamarlaSS+KarlinIV-CompPhysComm} frequently re-appear  in
+    many subsequent publications, but its adoption seem to be more or less confined to the proposing author's  research  groups,
+    and to direct citations---so that one may perceive then to be in competition.
+
+    It is worth noting that all `mainstream' lattice naming schemes---whether `$E_{D,n}^{d}$', `DdQb' and  its  variations---are
+    able to describe space-filling, Bravais lattices. Yet, all  such  lattice  naming  schemes  are  velocity  count  based  and
+    therefore suffer from ambiguity, as, for instance, the sole `D2Q25' (or `D2V25', or `D2Q$5^2$') information \emph{can}  mean
+    many different lattice configurations, having completely different envelope shapes, conception strategy,  set  of  populated
+    energy levels, and optional shiftings, since it only specifies a set of  25  discrete  velocities  in  two  Euclidean  space
+    dimensions, and, in the case of the `$E_{D,n}^{d}$' scheme, the resulting order of approximation.
+
+    Aiming at space-filling, regular, Bravais types in one- to three-dimensional Euclidean spaces with complete, fully-populated
+    energy levels,  the  authors  conjecture~\cite{2020-NaaktgeborenC+AndradeFN-BravLatNam-engrXiv-rev00}  that  a  scheme  with
+    (i)~energy-level-based primitives, (ii)~that allows for operations such as (tensor product)  extensions  and  shiftings;  is
+    able to produce relatively \emph{concise} and \emph{unambiguous} lattice  names,  while  being  sufficiently  \emph{generic}
+    within its category.
+
+
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                      Citations by Year                                                       %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\section{Citations by Year}
+
+    The following are the citations indexed by year in chronological order: \input{./yearReport.tex}
+
+
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                         Conclusions                                                          %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\section{Conclusions}
+
+    A survey of lattice naming systems for  lattice-Boltzmann  (LB)  methods,  from  its  Lattice-Gas  Automata  (LGA)  historic
+    predecessor to the present time has been performed, which correspond to the period of years of our Lord from 1973 to 2020.
+
+    From the survey, key findings include: (i)~the appearance (and discontinuance) of  many  lattice  naming  schemes  over  the
+    years, (ii)~an apparent lack of published efforts solely geared  towards  major  lattice  name  standardizations,  (iii)~the
+    existence of a great diversity of lattice types, (iv)~the prominence  of  Qian's  (and  coworkers)'~\cite{1990-QianYH-Paris,
+    1991-QianYH+LallemandP-AdvKinTheoContMech} velocity-count based `DdQb' naming  scheme---such  as  D2Q9---being  the  closest
+    thing to a de-facto standard in the LB literature; (v)~the existence of other, seemingly competing,  velocity  count  naming
+    standards;   and   (vi)~the   ambiguity   of   velocity-count   based    lattice    naming    schemes,    plainly    evident
+    in~\cite{2014-MengJ+ZhangY-JComputPhys, 2017-PengY+ZhangJM-MathProblEng}.
+
+    From the survey and from the diversity of lattice types, it becomes somewhat  clear  that  (a)~probably  there  will  be  no
+    generic and concise `one-size-fits-all' naming scheme for all surveyed models, let alone, published ones, and (b)~a concise,
+    unambiguous naming scheme, at least for the more regular lattice types is in order, as to enable the necessary  distinctions
+    between    models    of    same    dimensionality    and    velocity    count.     An     upcoming     work     from     the
+    authors~\cite{2020-NaaktgeborenC+AndradeFN-BravLatNam-engrXiv-rev00} is to make a proposition.
+
+
+%-------------------------------------------------------------------------------------------------------------------------------
