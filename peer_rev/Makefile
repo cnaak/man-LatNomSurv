@@ -28,11 +28,10 @@ fig/%.pdf: fig/%.svg
 yearReport.tex: bibfile.bib
 	yearReport | tee yearReport.tex
 
-${PREF}.pdf: ${PREF}.tex 0*tex PreprintVersion.tex yearReport.tex \
-		cc/by.pdf \
+${PREF}.pdf: ${PREF}.tex 0*tex yearReport.tex \
 		bibfile.bib
-	pdflatex --enable-write18 ${PREF}.tex
-	bibtex ${PREF}
-	pdflatex --enable-write18 ${PREF}.tex
-	pdflatex --enable-write18 ${PREF}.tex
+	pdflatex ${PREF}.tex
+	bibtex   ${PREF}
+	pdflatex ${PREF}.tex
+	pdflatex ${PREF}.tex
 
